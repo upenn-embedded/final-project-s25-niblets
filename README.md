@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/WXeqVgks)
 # final-project-skeleton
 
-* Team Number:
+* Team Number: 12
 * Team Name:
 * Team Members:
 * GitHub Repository URL:
@@ -20,6 +20,9 @@ This project builds a standalone digital audio device for recording, playback, a
 ### 3. System Block Diagram
 
 *Show your high level design, as done in WS1 and WS2. What are the critical components in your system? How do they communicate (I2C?, interrupts, ADC, etc.)? What power regulation do you need?*
+
+![Final Project drawio](https://github.com/user-attachments/assets/ce3792fa-0274-4716-8101-cea68543b096)
+
 
 ### 4. Design Sketches
 
