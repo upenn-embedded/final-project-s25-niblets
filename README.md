@@ -46,8 +46,7 @@ Here, you will define any special terms, acronyms, or abbreviations you plan to 
 | SRS-02  Microphone Recording Capability |The microphone must capture audio input with sufficient clarity and store it in a digital format when enabled. **Validation**: Record test samples and analyze audio quality, noise levels, and latency.
 | SRS-03 SD Card Storage & Read/Write Operations | The SD card module must support reading and writing data efficiently, ensuring reliable storage of music, recorded audio, and system logs.**Validation** Conduct read/write speed tests, check file integrity, and test compatibility with different SD card sizes.
 |SRS-04  Speaker Audio Output | The speaker must play sound accurately and at a sufficient volume without distortion when provided with an audio signal. **Validation** Measure frequency response, output power, and signal clarity under different playback conditions.
-|SRS-05  Microcontroller (MCU) Interfacing | The microcontrollers must communicate seamlessly with each other and with peripherals such as the LCD, microphone, SD card, and speaker.
-**Validation** Perform communication protocol tests (e.g., I2C, SPI, UART), measure data transfer latency, and ensure stability under various loads.
+|SRS-05  Microcontroller (MCU) Interfacing | The microcontrollers must communicate seamlessly with each other and with peripherals such as the LCD, microphone, SD card, and speaker. **Validation** Perform communication protocol tests (e.g., I2C, SPI, UART), measure data transfer latency, and ensure stability under various loads.
 | SRS-06  User Interface Responsiveness | The system shall provide an intuitive and responsive user interface for navigation and control. **Validation** Test button responsiveness, menu transitions, and overall usability during different operations.
 
 ### 6. Hardware Requirements Specification (HRS)
