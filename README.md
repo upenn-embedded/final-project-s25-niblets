@@ -21,7 +21,8 @@ This project builds a standalone digital audio device for recording, playback, a
 
 *Show your high level design, as done in WS1 and WS2. What are the critical components in your system? How do they communicate (I2C?, interrupts, ADC, etc.)? What power regulation do you need?*
 
-![Final Project drawio](https://github.com/user-attachments/assets/ce3792fa-0274-4716-8101-cea68543b096)
+![Final Project drawio (1)](https://github.com/user-attachments/assets/be77a351-a103-4a29-b93d-83390659dbad)
+
 
 
 ### 4. Design Sketches
