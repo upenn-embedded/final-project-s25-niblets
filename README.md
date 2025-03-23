@@ -4,7 +4,7 @@
 * Team Number: 12
 * Team Name: Niblets
 * Team Members: Claren Clarkson Ochieng, Patrick Zhao, Praise Ndlovu
-* GitHub Repository URL:
+* GitHub Repository URL: https://github.com/upenn-embedded/final-project-s25-niblets
 * GitHub Pages Website URL: [for final submission]
 
 ## Final Project Proposal
