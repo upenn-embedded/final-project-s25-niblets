@@ -2,8 +2,8 @@
 # final-project-skeleton
 
 * Team Number: 12
-* Team Name:
-* Team Members:
+* Team Name: Niblets
+* Team Members: Claren Clarkson Ochieng, Patrick Zhao, Praise Ndlovu
 * GitHub Repository URL:
 * GitHub Pages Website URL: [for final submission]
 
