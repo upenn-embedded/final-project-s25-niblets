@@ -60,6 +60,9 @@ Validation: Measure power consumption under different workloads and test battery
 
 ### 6. Hardware Requirements Specification (HRS)
 
+| ID     | Description                                                                                                                                                                                                              |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+
 | HRS-01 | LCD Display | The LCD display must have a minimum resolution of 480x320 pixels and support clear, legible display of menus, playback status, and user interactions.
 Validation: Verify display clarity, resolution, and update rate during different operations.|
 
@@ -91,6 +94,7 @@ Here, you will define any special terms, acronyms, or abbreviations you plan to 
 |HRS-05	|The device shall display the current track information, including title and duration, on the LCD screen.
 |HRS-06	|The speaker shall output clear and undistorted audio at all playback levels.
 |HRS-07	|The audio player shall automatically resume playback from the last position upon power-on, if no other track is selected.
+
 ### 7. Bill of Materials (BOM)
 
 *What major components do you need and why? Try to be as specific as possible. Your Hardware & Software Requirements Specifications should inform your component choices.*
