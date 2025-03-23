@@ -40,10 +40,9 @@ Here, you will define any special terms, acronyms, or abbreviations you plan to 
 
 **5.2 Functionality**
 
-| ID     | Description                                                                                                                                                                                                              |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-
-| SRS-01  LCD Display Functionality | The LCD must accurately render graphics and display the current state of the iPod, including menus, playback status, and user interactions.
+| ID     | Description                                                                                                                                                                |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SRS-01 - LCD Display Functionality | The LCD must accurately render graphics and display the current state of the iPod, including menus, playback status, and user interactions.
 Validation: Verify display clarity, responsiveness, and update rate during different operations.
 | SRS-02  Microphone Recording Capability |The microphone must capture audio input with sufficient clarity and store it in a digital format when enabled.
 Validation: Record test samples and analyze audio quality, noise levels, and latency.
