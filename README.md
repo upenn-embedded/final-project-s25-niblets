@@ -28,6 +28,15 @@ This project builds a standalone digital audio device for recording, playback, a
 
 *What will your project look like? Do you have any critical design features? Will you need any special manufacturing techniques to achieve your vision, like power tools, laser cutting, or 3D printing?*
 
+![image](https://github.com/user-attachments/assets/d599ddcd-3fae-40a1-8e28-2bc02aedf38c)
+
+![image](https://github.com/user-attachments/assets/8bc6fe02-0a67-4423-bc97-a7975b137fdf)
+
+![image](https://github.com/user-attachments/assets/6755dc41-bf25-4e8d-8f9c-a5ef78938de6)
+
+![image](https://github.com/user-attachments/assets/b8ea513f-df0c-4dc4-bb79-ba5a6117a0d5)
+
+
 We wll need 3D printing to print out a case for fitting all of our components in. We may also require screws to place our components in.
 
 ### 5. Software Requirements Specification (SRS)
