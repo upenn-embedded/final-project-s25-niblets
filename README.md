@@ -60,11 +60,11 @@ Validation: Measure power consumption under different workloads and test battery
 
 ### 6. Hardware Requirements Specification (HRS)
 
-| ID     | Description                                                                                                                                                                                                              |
+| ID     | Description                       |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
-| HRS-01 | LCD Display | The LCD display must have a minimum resolution of 480x320 pixels and support clear, legible display of menus, playback status, and user interactions.
-Validation: Verify display clarity, resolution, and update rate during different operations.|
+| HRS-01 | The LCD display must have a minimum resolution of 480x320 pixels and support clear, legible display of menus, playback status, and user interactions.
+Validation: Verify display clarity, resolution, and update rate during different operations.
 
 | HRS-02 | Microphone | The microphone must capture audio with high fidelity and low noise, providing clear input for recording and voice commands.
 Validation: Record test samples, analyze audio quality, noise levels, and latency.|
