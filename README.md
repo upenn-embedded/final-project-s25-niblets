@@ -15,7 +15,7 @@ This project develops a digital audio device integrating an LCD, microphone, SD 
 
 ### 2. Motivation
 
-*What is the problem that you are trying to solve? Why is this project interesting? What is the intended purpose?*
+This project builds a standalone digital audio device for recording, playback, and user interaction. It’s a hands-on dive into writing graphics, mastering serial protocols, and making hardware talk seamlessly. The goal? A fully functional, ready-to-use device—while leveling up in embedded systems and low-level programming!
 
 ### 3. System Block Diagram
 
@@ -39,38 +39,49 @@ Here, you will define any special terms, acronyms, or abbreviations you plan to 
 
 | ID     | Description                                                                                                                                                                                                              |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| SRS-01 | The IMU 3-axis acceleration will be measured with 16-bit depth every 100 milliseconds +/-10 milliseconds                                                                                                                 |
-| SRS-02 | The distance sensor shall operate and report values at least every .5 seconds.                                                                                                                                           |
-| SRS-03 | Upon non-nominal distance detected (i.e., the trap mechanism has changed at least 10 cm from the nominal range), the system shall be able to detect the change and alert the user in a timely manner (within 5 seconds). |
-| SRS-04 | Upon a request from the user, the system shall get an image from the internal camera and upload the image to the user system within 10s.                                                                                 |
+
+| SRS-01 | LCD Display Functionality | The LCD must accurately render graphics and display the current state of the iPod, including menus, playback status, and user interactions.
+Validation: Verify display clarity, responsiveness, and update rate during different operations.
+
+| SRS-02 | Microphone Recording Capability |The microphone must capture audio input with sufficient clarity and store it in a digital format when enabled.
+Validation: Record test samples and analyze audio quality, noise levels, and latency.
+| SRS-03 |SD Card Storage & Read/Write Operations | The SD card module must support reading and writing data efficiently, ensuring reliable storage of music, recorded audio, and system logs.
+Validation: Conduct read/write speed tests, check file integrity, and test compatibility with different SD card sizes.
+
+|SRS-04| Speaker Audio Output | The speaker must play sound accurately and at a sufficient volume without distortion when provided with an audio signal.
+Validation: Measure frequency response, output power, and signal clarity under different playback conditions.
+
+|SRS-05 | Microcontroller (MCU) Interfacing | The microcontrollers must communicate seamlessly with each other and with peripherals such as the LCD, microphone, SD card, and speaker.
+Validation: Perform communication protocol tests (e.g., I2C, SPI, UART), measure data transfer latency, and ensure stability under various loads.
+
+| SRS-06 | User Interface Responsiveness | The system shall provide an intuitive and responsive user interface for navigation and control.
+Validation: Test button responsiveness, menu transitions, and overall usability during different operations.
+
+|SRS-07 | Power Management | The device shall operate efficiently within power constraints, ensuring optimal battery life.
+Validation: Measure power consumption under different workloads and test battery performance over extended usage.
 
 ### 6. Hardware Requirements Specification (HRS)
 
-*Formulate key hardware requirements here. Think deeply on the design: What must your device do? How will you measure this during validation testing? Create 4 to 8 critical system requirements.*
+| HRS-01 | LCD Display | The LCD display must have a minimum resolution of 480x320 pixels and support clear, legible display of menus, playback status, and user interactions.
+Validation: Verify display clarity, resolution, and update rate during different operations.
 
-**LCD Display Functionality**
-- The LCD must accurately render graphics and display the current state of the iPod, including menus, playback status, and user interactions.
-Validation: Verify display clarity, responsiveness, and update rate during different operations.
+| HRS-02 | Microphone | The microphone must capture audio with high fidelity and low noise, providing clear input for recording and voice commands.
+Validation: Record test samples, analyze audio quality, noise levels, and latency.
 
-**Microphone Recording Capability**
-- The microphone must capture audio input with sufficient clarity and store it in a digital format when enabled.
-Validation: Record test samples and analyze audio quality, noise levels, and latency.
-
-**SD Card Storage & Read/Write Operations**
-The SD card module must support reading and writing data efficiently, ensuring reliable storage of music, recorded audio, and system logs.
+| HRS-03 | SD Card Module | The SD card module must support reading and writing at fast speeds to efficiently handle large files such as audio and system logs.
 Validation: Conduct read/write speed tests, check file integrity, and test compatibility with different SD card sizes.
 
-**Speaker Audio Output**
-The speaker must play sound accurately and at a sufficient volume without distortion when provided with an audio signal.
+| HRS-04 | Speaker | The speaker must provide clear and undistorted audio output, with sufficient volume for playback in typical environments.
 Validation: Measure frequency response, output power, and signal clarity under different playback conditions.
 
-**Microcontroller (MCU) Interfacing**
-The microcontrollers must communicate seamlessly with each other and with peripherals such as the LCD, microphone, SD card, and speaker.
-Validation: Perform communication protocol tests (e.g., I2C, SPI, UART ), measure data transfer latency, and ensure stability under various loads.
+| HRS-05 | Microcontroller (MCU) | The microcontroller must manage the system’s components, handle user input, audio processing, and communication between peripherals.
+Validation: Perform communication protocol tests (e.g., I2C, SPI, UART), measure data transfer latency, and ensure stability under various loads.
 
+| HRS-06 | Power Supply | The power supply must support efficient power management to ensure optimal device operation and battery longevity.
+Validation: Measure power consumption under different workloads and test battery performance over extended usage.
 
-
-*These must be testable! See the Final Project Manual Appendix for details. Refer to the table below; replace these examples with your own.*
+| HRS-07 | Buttons & User Interface Controls | Physical buttons or touch interface must allow the user to navigate the system and control media playback and settings.
+Validation: Test button responsiveness, UI transitions, and overall usability during different operations.
 
 **6.1 Definitions, Abbreviations**
 
@@ -80,11 +91,13 @@ Here, you will define any special terms, acronyms, or abbreviations you plan to 
 
 | ID     | Description                                                                                                                        |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| HRS-01 | A distance sensor shall be used for obstacle detection. The sensor shall detect obstacles at a maximum distance of at least 10 cm. |
-| HRS-02 | A noisemaker shall be inside the trap with a strength of at least 55 dB.                                                           |
-| HRS-03 | An electronic motor shall be used to reset the trap remotely and have a torque of 40 Nm in order to reset the trap mechanism.      |
-| HRS-04 | A camera sensor shall be used to capture images of the trap interior. The resolution shall be at least 480p.                       |
-
+|HRS-01	|The audio player shall support playback of audio files from the SD card, with support for common formats such as MP3 and WAV.
+|HRS-02	|The device shall include a play/pause button that toggles audio playback without delay.
+|HRS-03	|The volume control shall allow the user to adjust audio output levels from silent to a maximum of 85 dB.
+|HRS-04	|The audio player shall support track navigation, allowing the user to skip forward or backward between audio tracks.
+|HRS-05	|The device shall display the current track information, including title and duration, on the LCD screen.
+|HRS-06	|The speaker shall output clear and undistorted audio at all playback levels.
+|HRS-07	|The audio player shall automatically resume playback from the last position upon power-on, if no other track is selected.
 ### 7. Bill of Materials (BOM)
 
 *What major components do you need and why? Try to be as specific as possible. Your Hardware & Software Requirements Specifications should inform your component choices.*
