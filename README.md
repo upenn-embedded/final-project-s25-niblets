@@ -48,6 +48,28 @@ Here, you will define any special terms, acronyms, or abbreviations you plan to 
 
 *Formulate key hardware requirements here. Think deeply on the design: What must your device do? How will you measure this during validation testing? Create 4 to 8 critical system requirements.*
 
+**LCD Display Functionality**
+- The LCD must accurately render graphics and display the current state of the iPod, including menus, playback status, and user interactions.
+Validation: Verify display clarity, responsiveness, and update rate during different operations.
+
+**Microphone Recording Capability**
+- The microphone must capture audio input with sufficient clarity and store it in a digital format when enabled.
+Validation: Record test samples and analyze audio quality, noise levels, and latency.
+
+**SD Card Storage & Read/Write Operations**
+The SD card module must support reading and writing data efficiently, ensuring reliable storage of music, recorded audio, and system logs.
+Validation: Conduct read/write speed tests, check file integrity, and test compatibility with different SD card sizes.
+
+**Speaker Audio Output**
+The speaker must play sound accurately and at a sufficient volume without distortion when provided with an audio signal.
+Validation: Measure frequency response, output power, and signal clarity under different playback conditions.
+
+**Microcontroller (MCU) Interfacing**
+The microcontrollers must communicate seamlessly with each other and with peripherals such as the LCD, microphone, SD card, and speaker.
+Validation: Perform communication protocol tests (e.g., I2C, SPI, UART ), measure data transfer latency, and ensure stability under various loads.
+
+
+
 *These must be testable! See the Final Project Manual Appendix for details. Refer to the table below; replace these examples with your own.*
 
 **6.1 Definitions, Abbreviations**
