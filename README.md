@@ -11,7 +11,7 @@
 
 ### 1. Abstract
 
-*In a few sentences, describe your final project.*
+This project develops a digital audio device integrating an LCD, microphone, SD card, speaker, and microcontrollers for seamless audio playback, recording, and user interaction. The system ensures efficient communication, real-time performance, and reliable data storage. Validation includes display responsiveness, audio quality, and peripheral interfacing to optimize functionality and usability.
 
 ### 2. Motivation
 
