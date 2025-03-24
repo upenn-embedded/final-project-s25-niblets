@@ -1,4 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/WXeqVgks)
+
 # NIBLETS FINAL PROJECTION
 
 * Team Number: 12
@@ -23,8 +24,6 @@ This project builds a standalone digital audio device for recording, playback, a
 
 ![Final Project drawio (1)](https://github.com/user-attachments/assets/be77a351-a103-4a29-b93d-83390659dbad)
 
-
-
 ### 4. Design Sketches
 
 *What will your project look like? Do you have any critical design features? Will you need any special manufacturing techniques to achieve your vision, like power tools, laser cutting, or 3D printing?*
@@ -36,7 +35,6 @@ This project builds a standalone digital audio device for recording, playback, a
 ![image](https://github.com/user-attachments/assets/6755dc41-bf25-4e8d-8f9c-a5ef78938de6)
 
 ![image](https://github.com/user-attachments/assets/b8ea513f-df0c-4dc4-bb79-ba5a6117a0d5)
-
 
 We wll need 3D printing to print out a case for fitting all of our components in. We may also require screws to place our components in.
 
@@ -52,26 +50,26 @@ Here, you will define any special terms, acronyms, or abbreviations you plan to 
 
 **5.2 Functionality**
 
-| ID     | Description                                                                                                                                                                |
-| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| SRS-01 - LCD Display Functionality | The LCD must accurately render graphics and display the current state of the iPod, including menus, playback status, and user interactions. **Validation**: Verify display clarity, responsiveness, and update rate during different operations.
-| SRS-02  Microphone Recording Capability |The microphone must capture audio input with sufficient clarity and store it in a digital format when enabled. **Validation**: Record test samples and analyze audio quality, noise levels, and latency.
-| SRS-03 SD Card Storage & Read/Write Operations | The SD card module must support reading and writing data efficiently, ensuring reliable storage of music, recorded audio, and system logs.**Validation** Conduct read/write speed tests, check file integrity, and test compatibility with different SD card sizes.
-|SRS-04  Speaker Audio Output | The speaker must play sound accurately and at a sufficient volume without distortion when provided with an audio signal. **Validation** Measure frequency response, output power, and signal clarity under different playback conditions.
-|SRS-05  Microcontroller (MCU) Interfacing | The microcontrollers must communicate seamlessly with each other and with peripherals such as the LCD, microphone, SD card, and speaker. **Validation** Perform communication protocol tests (e.g., I2C, SPI, UART), measure data transfer latency, and ensure stability under various loads.
-| SRS-06  User Interface Responsiveness | The system shall provide an intuitive and responsive user interface for navigation and control. **Validation** Test button responsiveness, menu transitions, and overall usability during different operations.
+| ID                                             | Description                                                                                                                                                                                                                                                                                        |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SRS-01 - LCD Display Functionality             | The LCD must accurately render graphics and display the current state of the iPod, including menus, playback status, and user interactions.**Validation**: Verify display clarity, responsiveness, and update rate during different operations.                                              |
+| SRS-02  Microphone Recording Capability        | The microphone must capture audio input with sufficient clarity and store it in a digital format when enabled.**Validation**: Record test samples and analyze audio quality, noise levels, and latency.                                                                                      |
+| SRS-03 SD Card Storage & Read/Write Operations | The SD card module must support reading and writing data efficiently, ensuring reliable storage of music, recorded audio, and system logs.**Validation** Conduct read/write speed tests, check file integrity, and test compatibility with different SD card sizes.                          |
+| SRS-04  Speaker Audio Output                   | The speaker must play sound accurately and at a sufficient volume without distortion when provided with an audio signal.**Validation** Measure frequency response, output power, and signal clarity under different playback conditions.                                                     |
+| SRS-05  Microcontroller (MCU) Interfacing      | The microcontrollers must communicate seamlessly with each other and with peripherals such as the LCD, microphone, SD card, and speaker.**Validation** Perform communication protocol tests (e.g., I2C, SPI, UART), measure data transfer latency, and ensure stability under various loads. |
+| SRS-06  User Interface Responsiveness          | The system shall provide an intuitive and responsive user interface for navigation and control.**Validation** Test button responsiveness, menu transitions, and overall usability during different operations.                                                                               |
 
 ### 6. Hardware Requirements Specification (HRS)
 
-| ID     | Description                                                                                                                                                    |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| HRS-01 - LCD Display | The LCD display must have a minimum resolution of 480x320 pixels and support clear, legible display of menus, playback status, and user interactions **Validation**: Verify display clarity, resolution, and update rate during different operations.
-| HRS-02 - Microphone | The microphone must capture audio with high fidelity and low noise, providing clear input for recording and voice commands. **Validation**: Record test samples, analyze audio quality, noise levels, and latency.
-| HRS-03 - SD Card Module | The SD card module must support reading and writing at fast speeds to efficiently handle large files such as audio and system logs. **Validation**: Conduct read/write speed tests, check file integrity, and test compatibility with different SD card sizes.
-| HRS-04 - Speaker | The speaker must provide clear and undistorted audio output, with sufficient volume for playback in typical environments. **Validation**: Measure frequency response, output power, and signal clarity under different playback conditions.
-| HRS-05 - Microcontroller (MCU) | The microcontroller must manage the system’s components, handle user input, audio processing, and communication between peripherals. **Validation**: Perform communication protocol tests (e.g., I2C, SPI, UART), measure data transfer latency, and ensure stability under various loads.
-| HRS-06 - Power Supply | The power supply must support efficient power management to ensure optimal device operation and battery longevity. **Validation**: Measure power consumption under different workloads and test battery performance over extended usage.
-| HRS-07 - Buttons & User Interface Controls | Physical buttons or touch interface must allow the user to navigate the system and control media playback and settings. **Validation**: Test button responsiveness, UI transitions, and overall usability during different operations.
+| ID                                         | Description                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| HRS-01 - LCD Display                       | The LCD display must have a minimum resolution of 480x320 pixels and support clear, legible display of menus, playback status, and user interactions**Validation**: Verify display clarity, resolution, and update rate during different operations.                                       |
+| HRS-02 - Microphone                        | The microphone must capture audio with high fidelity and low noise, providing clear input for recording and voice commands.**Validation**: Record test samples, analyze audio quality, noise levels, and latency.                                                                          |
+| HRS-03 - SD Card Module                    | The SD card module must support reading and writing at fast speeds to efficiently handle large files such as audio and system logs.**Validation**: Conduct read/write speed tests, check file integrity, and test compatibility with different SD card sizes.                              |
+| HRS-04 - Speaker                           | The speaker must provide clear and undistorted audio output, with sufficient volume for playback in typical environments.**Validation**: Measure frequency response, output power, and signal clarity under different playback conditions.                                                 |
+| HRS-05 - Microcontroller (MCU)             | The microcontroller must manage the system’s components, handle user input, audio processing, and communication between peripherals.**Validation**: Perform communication protocol tests (e.g., I2C, SPI, UART), measure data transfer latency, and ensure stability under various loads. |
+| HRS-06 - Power Supply                      | The power supply must support efficient power management to ensure optimal device operation and battery longevity.**Validation**: Measure power consumption under different workloads and test battery performance over extended usage.                                                    |
+| HRS-07 - Buttons & User Interface Controls | Physical buttons or touch interface must allow the user to navigate the system and control media playback and settings.**Validation**: Test button responsiveness, UI transitions, and overall usability during different operations.                                                      |
 
 **6.1 Definitions, Abbreviations**
 
@@ -79,19 +77,23 @@ Here, you will define any special terms, acronyms, or abbreviations you plan to 
 
 **6.2 Functionality**
 
-| ID     | Description                                                                                                                        |
-| ------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-|HRS-01	|The audio player shall support playback of audio files from the SD card, with support for common formats such as MP3 and WAV.
-|HRS-02	|The device shall include a play/pause button that toggles audio playback without delay.
-|HRS-03	|The volume control shall allow the user to adjust audio output levels from silent to a maximum of 85 dB.
-|HRS-04	|The audio player shall support track navigation, allowing the user to skip forward or backward between audio tracks.
-|HRS-05	|The device shall display the current track information, including title and duration, on the LCD screen.
-|HRS-06	|The speaker shall output clear and undistorted audio at all playback levels.
-|HRS-07	|The audio player shall automatically resume playback from the last position upon power-on, if no other track is selected.
+| ID     | Description                                                                                                                   |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| HRS-01 | The audio player shall support playback of audio files from the SD card, with support for common formats such as MP3 and WAV. |
+| HRS-02 | The device shall include a play/pause button that toggles audio playback without delay.                                       |
+| HRS-03 | The volume control shall allow the user to adjust audio output levels from silent to a maximum of 85 dB.                      |
+| HRS-04 | The audio player shall support track navigation, allowing the user to skip forward or backward between audio tracks.          |
+| HRS-05 | The device shall display the current track information, including title and duration, on the LCD screen.                      |
+| HRS-06 | The speaker shall output clear and undistorted audio at all playback levels.                                                  |
+| HRS-07 | The audio player shall automatically resume playback from the last position upon power-on, if no other track is selected.     |
 
 ### 7. Bill of Materials (BOM)
 
 *What major components do you need and why? Try to be as specific as possible. Your Hardware & Software Requirements Specifications should inform your component choices.*
+
+Some components that we will need are the ATMEGA328PB which we intend to utilize with the IMU since we already know how the two devices interface given our worksheet experience. We want to use the NUCLEO-F446RE as our main process since it is able to process mode data, which will be required when we are storing and playing music data, and since it has more pins that will allow us to interface with all of our components.
+
+Some output components that we are using are our adafruit speaker, which we find to be standard, an audiojack to allow earbud use and an LCD display touch panel. We chose the LCD display with the touch functionality because we believe that we 
 
 *In addition to this written response, copy the Final Project BOM Google Sheet and fill it out with your critical components (think: processors, sensors, actuators). Include the link to your BOM in this section.*
 https://docs.google.com/spreadsheets/d/1H9uE5A8rThZXxHaYCtSz2vRuI-nbI0XPYlmzn1kPBnA/edit?gid=2071228825#gid=2071228825
@@ -106,12 +108,12 @@ We will demonstrate our project in class. The end product will be small enough t
 
 *You've got limited time to get this project done! How will you plan your sprint milestones? How will you distribute the work within your team? Review the schedule in the final project manual for exact dates.*
 
-| Milestone  | Functionality Achieved | Distribution of Work |
-| ---------- | ---------------------- | -------------------- |
-| Sprint #1  | MicroSD Card Reading. LCD turning on with basic graphic functionality. Microphone recording voice. IMU sending understandable data to device. Speaker should be playing some audio that is controllable by both processors. Serial protocols all should be completed as well                       | Claren - Microphone voice recording, Praise - LCD turning on with basic graphics, Patrick - Speaker playing audio and SD card reading                     |
-| Sprint #2  | Start integration of components. Get audio jack working with amplifier. Start playing music through SD card read through speaker and be able to store recorded audio. Buttons should start controlling board features. LCD screen should display a more understandable graphic. CAD of case should be designed.                  | Patrick - Design CAD of case. Praise - Playing music through SD card and selection through LCD screen. Claren - Connect audio jack with amplifier and play music through earbuds.                  |
-| MVP Demo   | All components connected and fit inside case. Working minimal demo of song selection and music playing through device.                       | Patrick - Assembling case, soldering needs. Praise - Connect all of the software components together to play audio. Claren - Work on graphics of LCD screen to allow song selection and better experience.                    |
-| Final Demo | Hopefully little to no work left here. Finish any features that were left unfinished from MVP. Program better graphics in the processor for the LCD                       | Patrick, Praise, Claren - Work on assorted problems to debug at finish ine.                    |
+| Milestone  | Functionality Achieved                                                                                                                                                                                                                                                                                          | Distribution of Work                                                                                                                                                                                       |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sprint #1  | MicroSD Card Reading. LCD turning on with basic graphic functionality. Microphone recording voice. IMU sending understandable data to device. Speaker should be playing some audio that is controllable by both processors. Serial protocols all should be completed as well                                    | Claren - Microphone voice recording, Praise - LCD turning on with basic graphics, Patrick - Speaker playing audio and SD card reading                                                                      |
+| Sprint #2  | Start integration of components. Get audio jack working with amplifier. Start playing music through SD card read through speaker and be able to store recorded audio. Buttons should start controlling board features. LCD screen should display a more understandable graphic. CAD of case should be designed. | Patrick - Design CAD of case. Praise - Playing music through SD card and selection through LCD screen. Claren - Connect audio jack with amplifier and play music through earbuds.                          |
+| MVP Demo   | All components connected and fit inside case. Working minimal demo of song selection and music playing through device.                                                                                                                                                                                          | Patrick - Assembling case, soldering needs. Praise - Connect all of the software components together to play audio. Claren - Work on graphics of LCD screen to allow song selection and better experience. |
+| Final Demo | Hopefully little to no work left here. Finish any features that were left unfinished from MVP. Program better graphics in the processor for the LCD                                                                                                                                                             | Patrick, Praise, Claren - Work on assorted problems to debug at finish ine.                                                                                                                                |
 
 **This is the end of the Project Proposal section. The remaining sections will be filled out based on the milestone schedule.**
 
