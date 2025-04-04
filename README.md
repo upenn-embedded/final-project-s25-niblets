@@ -127,6 +127,10 @@ The code is too long to place here, so we've included a screenshot of us interfa
 <img width="949" alt="image" src="https://github.com/user-attachments/assets/292fcaaa-2a16-42c7-b632-38fc7f10d4ef" />
 
 Please refer to the FATfs library code that we've uploaded and have been modifying.
+
+Below is a picture of our wired AVR with our SD Card Reader Board.
+<img width="276" alt="image" src="https://github.com/user-attachments/assets/d07935cd-ba36-4a09-a32f-57ee8b6ecad5" />
+
 ### Current state of project
 In terms of parts, we have everything we need and don't expect to need anything in the near future. One of us also has a 3D printer that we have ready access to which we will use for making the case so there shouldn't be any problems.
 
@@ -137,7 +141,7 @@ We haven't been able to read data from an SD card yet which we expected to be th
    a. We expect this to take another 5 hours. Debugging the code is taking a long time and requires use to better understand the FATfs library for file management.  <br>
    b. Patrick and Praise  <br>
    c. When we run the example code provided by the FATfs library for AVR, we want that when we write "fl /" to the serial terminal to see a return of FR_OKAY and of the    folders in the SD card.  <br>
-   d. Since we are listening to music from SD card readings, we need our Atmega328pb board to be able to extract music data from an SD card and play it later. To accomplish this, we need to utilize a file management system that lets us select specific files and which we will then read and use to play music. We were able to find code online that we can use as a file management system, but reading and understanding the code has taken a long time. We are also configuring the code that we found online to fit our device as well as our needs. We need to make sure that this completely works before we can start playing data and doing other things. <br> <br>
+   d. Since we are listening to music from SD card readings, we need our Atmega328pb board to be able to extract music data from an SD card and play it later. To accomplish this, we need to utilize a file management system that lets us select specific files and which we will then read and use to play music. We were able to find code online that we can use as a file management system, but reading and understanding the code has taken a long time. We are also configuring the code that we found online to fit our device as well as our needs. We need to make sure that this completely works before we can start playing data and doing other things. If reading from the SD card doesn't work by Monday, we are planning to use data from the cloud instead by using an ESP32 and sending data from there into the STM32. <br> <br> 
    
 2. Integrate data reading from SD card onto STM  <br>
    a. We expect this to take 3 hours. Once we have data reading from SD card onto the AVR, we can easily shift it onto the STM32 given we change some of the input / output ports.   <br>
