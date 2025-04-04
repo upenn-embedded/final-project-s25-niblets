@@ -176,6 +176,8 @@ Lastly, I wrote a bitmap-to-pixel conversion utility to convert any image into t
 
 I’ll upload screenshots of the partial LCD display and simulated GUI once we finalize the layout. The current SPI and LCD code is being refined and will be pushed to GitHub once it stabilizes.
 
+!['GUI'](gui.png)
+
 ## Next week's plan
 
 Fix SPI communication with IMU (ICM-20948)
