@@ -133,7 +133,27 @@ Below is a picture of our wired AVR with our SD Card Reader Board.
 
 <img width="276" alt="image" src="https://github.com/user-attachments/assets/d07935cd-ba36-4a09-a32f-57ee8b6ecad5" />
 
-Claren - I worked on setting up the I2S protocol betweeen the Atmega328PB and the INMP 441 microphone. The remaining tasks regarding this are debugging the INMP 441 to produce the correct SDA signals and interfacing with the rest of the project components. For the former, the SDA line is always low when viewed from an oscilloscope. There are two potential reasons behind this - either the microphone is broken or the sensor is meant to function like that. The datasheet does say that SDA is supposed to be pulled to zero for the first 2^18 signals. Initially when I tested this, I only saw zeros for the first few minutes then 30 minutes later I saw different non-zero values. I will investigate whether this is an issue with our clock prescaler in the coming week. I will also use a different microphone to test whether our microphone is broken.
+Claren - I worked on setting up the I2S protocol betweeen the Atmega328PB and the INMP 441 microphone. The remaining task regarding this is interfacing with the rest of the project components. Below are the updates from this week's work:
+
+Logic Analyzer Images
+
+For the logic analyzer images below, Channels 0, 1, and 2 refer to SDA, SCL and WS respectively.
+
+![image](https://github.com/user-attachments/assets/c64119f9-6c68-48c0-8ae2-f474aacdae67)
+
+According to the datasheet, SDA stays low for 2^18 clock cycles. I found this to be about 70ms which we should account for in our readings. This could be accounted for by a delay or maybe boot other operations as the microphone sets up.
+
+![image](https://github.com/user-attachments/assets/8c6f94f7-896a-4728-be40-fea3b27c0fae)
+
+The values printed on the serial terminal:
+
+![image](https://github.com/user-attachments/assets/ae5198e6-8952-4603-a64b-fcbf97b7228b)
+
+
+
+
+
+
 
 ### Current state of project
 In terms of parts, we have everything we need and don't expect to need anything in the near future. One of us also has a 3D printer that we have ready access to which we will use for making the case so there shouldn't be any problems.
