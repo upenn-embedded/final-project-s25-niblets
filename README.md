@@ -172,23 +172,37 @@ Lastly, I wrote a bitmap-to-pixel conversion utility to convert any image into t
 
 I’ll upload screenshots of the partial LCD display and simulated GUI once we finalize the layout. The current SPI and LCD code is being refined and will be pushed to GitHub once it stabilizes.
 
-Next week's plan
+## Next week's plan
+
 Fix SPI communication with IMU (ICM-20948)
+
 a. Estimated time: 4 hours
+
 b. Assigned to: Praise
+
 c. Definition of done: Reading the correct WHO_AM_I value (0xEA) from the IMU via SPI consistently.
+
 d. Detailed: This involves confirming SPI timing, polarity, and chip-select handling. If needed, I’ll use a logic analyzer to verify the signals.
+
 Debug and finalize LCD initialization
+
 a. Estimated time: 5 hours
+
 b. Assigned to: Praise
+
 c. Definition of done: Full-screen content is displayed correctly with stable refresh rates and no visible flickering.
+
 d. Detailed: I’ll review command sequences from the datasheet and compare them with known-good examples online. If the issue persists, I will test alternate initialization sequences.
-Push finalized SPI and LCD code to GitHub
+
+## Push finalized SPI and LCD code to GitHub
+
 a. Estimated time: 1 hour
 b. Assigned to: Praise
 c. Definition of done: SPI and LCD drivers are committed with documentation and usage examples in the repository.
 d. Detailed: I will add comments and organize the code into modular drivers with initialization and usage APIs.
+
 Integrate LCD GUI elements using SDL simulation output
+
 a. Estimated time: 3 hours
 b. Assigned to: Praise
 c. Definition of done: At least two GUI screens (e.g., boot screen and music selection screen) working in the simulation and partially on the real LCD.
