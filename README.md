@@ -135,21 +135,21 @@ We haven't been able to read data from an SD card yet which we expected to be th
 ### Next week's plan
 1. Reading data from the SD card <br>
    a. We expect this to take another 5 hours. Debugging the code is taking a long time and requires use to better understand the FATfs library for file management.  <br>
-   b. Patrick and Praise
-   c. When we run the example code provided by the FATfs library for AVR, we want that when we write "fl /" to the serial terminal to see a return of FR_OKAY and of the    folders in the SD card.
-   d. Since we are listening to music from SD card readings, we need our Atmega328pb board to be able to extract music data from an SD card and play it later. To accomplish this, we need to utilize a file management system that lets us select specific files and which we will then read and use to play music. We were able to find code online that we can use as a file management system, but reading and understanding the code has taken a long time. We are also configuring the code that we found online to fit our device as well as our needs. We need to make sure that this completely works before we can start playing data and doing other things.
+   b. Patrick and Praise  <br>
+   c. When we run the example code provided by the FATfs library for AVR, we want that when we write "fl /" to the serial terminal to see a return of FR_OKAY and of the    folders in the SD card.  <br>
+   d. Since we are listening to music from SD card readings, we need our Atmega328pb board to be able to extract music data from an SD card and play it later. To accomplish this, we need to utilize a file management system that lets us select specific files and which we will then read and use to play music. We were able to find code online that we can use as a file management system, but reading and understanding the code has taken a long time. We are also configuring the code that we found online to fit our device as well as our needs. We need to make sure that this completely works before we can start playing data and doing other things. <br> <br>
    
-2. Integrate data reading from SD card onto STM
-   a. We expect this to take 3 hours. Once we have data reading from SD card onto the AVR, we can easily shift it onto the STM32 given we change some of the input / output ports. 
-   b. Praise
-   c. We want the STM to be able to read data from our input on an SD card and then to print the names of the files inside of the SD card.
-   d. We need to make sure that the STM is able to read data in the same way as we program the AVR.
+2. Integrate data reading from SD card onto STM  <br>
+   a. We expect this to take 3 hours. Once we have data reading from SD card onto the AVR, we can easily shift it onto the STM32 given we change some of the input / output ports.   <br>
+   b. Praise  <br>
+   c. We want the STM to be able to read data from our input on an SD card and then to print the names of the files inside of the SD card.  <br>
+   d. We need to make sure that the STM is able to read data in the same way as we program the AVR.  <br>  <br>
 
-3. Playing music from data read on STM
-  a. We expect this to take 5 hours. Once we are able to read data from the SD card onto the STM, we need to be able to interpret that data and play it on our mono speaker
-  b. Claren and Patrick
-  c. We ultimately want to play a simple song (like twinkle twinkle) and see if we are able to play it through our mono speaker. We want the sound quality to be recognizable.
-  d. This is one of the more essential parts of our project, we need to be able to play music that we read from the STM. This will involve getting the data from the WAV files that we load onto our STM and being able to convert them to frequencies to play on our speaker. 
+3. Playing music from data read on STM  <br>
+  a. We expect this to take 5 hours. Once we are able to read data from the SD card onto the STM, we need to be able to interpret that data and play it on our mono speaker  <br>
+  b. Claren and Patrick  <br>
+  c. We ultimately want to play a simple song (like twinkle twinkle) and see if we are able to play it through our mono speaker. We want the sound quality to be recognizable.  <br>
+  d. This is one of the more essential parts of our project, we need to be able to play music that we read from the STM. This will involve getting the data from the WAV files that we load onto our STM and being able to convert them to frequencies to play on our speaker.   <br>
 
 ## Sprint Review #2
 
