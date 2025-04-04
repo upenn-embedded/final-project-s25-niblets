@@ -160,6 +160,40 @@ We haven't been able to read data from an SD card yet which we expected to be th
    b. Patrick
    c. For this task to be finished, I want to have created a CAD that contains all of our components within.
    d. This is a very important step in terms of creating housing for our device. We need to start early in terms of building our case because we will probably want to iterate in the future and printing will take a lot of time.
+
+## Praise
+I have been setting up our STM32 project and writing the initialization code for all the essential peripherals. This includes configuration for GPIOs, I2C, SPI, timers, and syscalls, which form the foundation of our embedded application. The SPI interface is still undergoing testing: I attempted to communicate with the ICM-20948 IMU using SPI, and so far, I have received 0x0F as a response when reading the WHO_AM_I register, which suggests a fault or misconfiguration. I am currently debugging this by checking the SPI settings (mode, prescaler, CS handling) and verifying physical connections.
+
+In parallel, I have also been working on the LCD module. It is partially functional—some data is being displayed, but the refresh rate is too low, and output only appears on half of the screen. I suspect this is due to incomplete initialization, possibly missing one or more commands required by the LCD controller’s startup sequence. I am currently cross-referencing the controller datasheet with the initialization routine.
+
+To speed up development and reduce iteration time, I created a simulation workspace on my laptop that uses SDL graphics to simulate the GUI. This allows us to test the visual components of the UI before deploying them on hardware. The SDL environment is functioning properly and mimics our target LCD resolution and layout.
+
+Lastly, I wrote a bitmap-to-pixel conversion utility to convert any image into the pixel array format required by our LCD driver. This will make it much easier to render static images or UI elements such as logos or backgrounds.
+
+I’ll upload screenshots of the partial LCD display and simulated GUI once we finalize the layout. The current SPI and LCD code is being refined and will be pushed to GitHub once it stabilizes.
+
+Next week's plan
+Fix SPI communication with IMU (ICM-20948)
+a. Estimated time: 4 hours
+b. Assigned to: Praise
+c. Definition of done: Reading the correct WHO_AM_I value (0xEA) from the IMU via SPI consistently.
+d. Detailed: This involves confirming SPI timing, polarity, and chip-select handling. If needed, I’ll use a logic analyzer to verify the signals.
+Debug and finalize LCD initialization
+a. Estimated time: 5 hours
+b. Assigned to: Praise
+c. Definition of done: Full-screen content is displayed correctly with stable refresh rates and no visible flickering.
+d. Detailed: I’ll review command sequences from the datasheet and compare them with known-good examples online. If the issue persists, I will test alternate initialization sequences.
+Push finalized SPI and LCD code to GitHub
+a. Estimated time: 1 hour
+b. Assigned to: Praise
+c. Definition of done: SPI and LCD drivers are committed with documentation and usage examples in the repository.
+d. Detailed: I will add comments and organize the code into modular drivers with initialization and usage APIs.
+Integrate LCD GUI elements using SDL simulation output
+a. Estimated time: 3 hours
+b. Assigned to: Praise
+c. Definition of done: At least two GUI screens (e.g., boot screen and music selection screen) working in the simulation and partially on the real LCD.
+d. Detailed: I will transfer the screen logic from SDL to the hardware LCD once it displays correctly in the simulation. 
+
 ## Sprint Review #2
 
 ### Last week's progress
