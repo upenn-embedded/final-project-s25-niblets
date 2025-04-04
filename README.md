@@ -124,12 +124,16 @@ Patrick - I have been working through interfacing our ATMEGA328PB with the SD ca
 <img width="214" alt="image" src="https://github.com/user-attachments/assets/e303c498-f2db-4be8-b9d2-67991d18a81f" />
 
 The code is too long to place here, so we've included a screenshot of us interfacing FATfs with the ATMEGA328PB (most of the program memory is consumed by the library!)
+
 <img width="949" alt="image" src="https://github.com/user-attachments/assets/292fcaaa-2a16-42c7-b632-38fc7f10d4ef" />
 
 Please refer to the FATfs library code that we've uploaded and have been modifying.
 
 Below is a picture of our wired AVR with our SD Card Reader Board.
+
 <img width="276" alt="image" src="https://github.com/user-attachments/assets/d07935cd-ba36-4a09-a32f-57ee8b6ecad5" />
+
+Claren - I worked on setting up the I2S protocol betweeen the Atmega328PB and the INMP 441 microphone. The remaining tasks regarding this are debugging the INMP 441 to produce the correct SDA signals and interfacing with the rest of the project components. For the former, the SDA line is always low when viewed from an oscilloscope. There are two potential reasons behind this - either the microphone is broken or the sensor is meant to function like that. The datasheet does say that SDA is supposed to be pulled to zero for the first 2^18 signals. Initially when I tested this, I only saw zeros for the first few minutes then 30 minutes later I saw different non-zero values. I will investigate whether this is an issue with our clock prescaler in the coming week. I will also use a different microphone to test whether our microphone is broken.
 
 ### Current state of project
 In terms of parts, we have everything we need and don't expect to need anything in the near future. One of us also has a 3D printer that we have ready access to which we will use for making the case so there shouldn't be any problems.
