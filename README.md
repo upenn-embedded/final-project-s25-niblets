@@ -149,8 +149,13 @@ We haven't been able to read data from an SD card yet which we expected to be th
   a. We expect this to take 5 hours. Once we are able to read data from the SD card onto the STM, we need to be able to interpret that data and play it on our mono speaker  <br>
   b. Claren and Patrick  <br>
   c. We ultimately want to play a simple song (like twinkle twinkle) and see if we are able to play it through our mono speaker. We want the sound quality to be recognizable.  <br>
-  d. This is one of the more essential parts of our project, we need to be able to play music that we read from the STM. This will involve getting the data from the WAV files that we load onto our STM and being able to convert them to frequencies to play on our speaker.   <br>
+  d. This is one of the more essential parts of our project, we need to be able to play music that we read from the STM. This will involve getting the data from the WAV files that we load onto our STM and being able to convert them to frequencies to play on our speaker.   <br> <br>
 
+4. CADing a case to contain everything <br>
+   a. We expect this to take 8 hours. We need to CAD a case both large enough to contain all of our components while also being small enough that can be handheld. <br>
+   b. Patrick
+   c. For this task to be finished, I want to have created a CAD that contains all of our components within.
+   d. This is a very important step in terms of creating housing for our device. We need to start early in terms of building our case because we will probably want to iterate in the future and printing will take a lot of time.
 ## Sprint Review #2
 
 ### Last week's progress
