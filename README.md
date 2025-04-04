@@ -126,7 +126,10 @@ Patrick - I have been working through interfacing our ATMEGA328PB with the SD ca
 The code is too long to place here, so we've included a screenshot of us interfacing FATfs with the ATMEGA328PB (most of the program memory is consumed by the library!)
 <img width="949" alt="image" src="https://github.com/user-attachments/assets/292fcaaa-2a16-42c7-b632-38fc7f10d4ef" />
 
+Please refer to the code folder for the FATfs library code that we've been modifying.
 ### Current state of project
+We haven't been able to read data from an SD card yet which we expected to be the hardest part of this project. We intend to work on this throughout this weekend to fix this problem.
+
 
 ### Next week's plan
 
