@@ -172,6 +172,12 @@ In terms of parts, we have everything we need and don't expect to need anything 
 
 We haven't been able to read data from an SD card yet which we expected to be the hardest part of this project. We intend to work on this throughout this weekend to fix this problem and get it reading txt files first, and then read WAV files from the SD card. The problem is that the SD card isn't being recognized which we suspect is an issue with our setup.
 
+We have been able to set up the microphone which is essential for saving data that we will later play back to the user if they choose to record themselves. Since this part is mostly complete, we will just look to integration in the future.
+
+We have been working on building out the renders that will be made on the LCD screen which is almost ready. We have also been setting up the LCD screen where we are still looking for a few more addresses to write data to. This is an important part of the project since we need to both display our data and use the LCD screen as a touch screen device.
+
+The bulk of the work is to configure the hardware we have to our microcontrollers given that we are leveraging a few complex libraries to complete some of the harder components such as file management when utilizing the SD card. The backup plan is to store the data on the cloud and send it to the STM32 using an ESP32 if we are unable to utilize the SD card reader board.
+
 ### Next week's plan
 
 1. Reading data from the SD card `<br>`
