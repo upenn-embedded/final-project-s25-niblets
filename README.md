@@ -124,10 +124,119 @@ We will demonstrate our project in class. The end product will be small enough t
 ## Sprint Review #1
 
 ### Last week's progress
+Patrick - I have been working through interfacing our ATMEGA328PB with the SD card reader using SPI which has been difficult. I've conducted some research and found the FATfs library as a way of file management and reading the data through buffers. I was able to change the configurations of an example FATfs project from ATMEGA1284P to our current device, but I think there are still some issues with the current configurations. Below is a picture of us interacting with the FATfs library after we ran it on our ATMEGA where we are able to initalize mounting, but the file reader isn't displaying any values even though the SD card reader board and SD card reader is connected to our microcontroller. The bulk of the work went into reading through the library and understanding how each part of it works mechanically which has taken a long time.
+<img width="214" alt="image" src="https://github.com/user-attachments/assets/e303c498-f2db-4be8-b9d2-67991d18a81f" />
+
+The code is too long to place here, so we've included a screenshot of us interfacing FATfs with the ATMEGA328PB (most of the program memory is consumed by the library!)
+
+<img width="949" alt="image" src="https://github.com/user-attachments/assets/292fcaaa-2a16-42c7-b632-38fc7f10d4ef" />
+
+Please refer to the FATfs library code that we've uploaded and have been modifying.
+
+Below is a picture of our wired AVR with our SD Card Reader Board.
+
+<img width="276" alt="image" src="https://github.com/user-attachments/assets/d07935cd-ba36-4a09-a32f-57ee8b6ecad5" />
+
+Claren - I worked on setting up the I2S protocol betweeen the Atmega328PB and the INMP 441 microphone. The remaining task regarding this is interfacing with the rest of the project components. Below are the updates from this week's work:
+
+Logic Analyzer Images
+
+For the logic analyzer images below, Channels 0, 1, and 2 refer to SDA, SCL and WS respectively.
+
+![image](https://github.com/user-attachments/assets/c64119f9-6c68-48c0-8ae2-f474aacdae67)
+
+According to the datasheet, SDA stays low for 2^18 clock cycles. I found this to be about 70ms which we should account for in our readings. This could be accounted for by a delay or maybe boot other operations as the microphone sets up.
+
+![image](https://github.com/user-attachments/assets/8c6f94f7-896a-4728-be40-fea3b27c0fae)
+
+The values printed on the serial terminal:
+
+![image](https://github.com/user-attachments/assets/ae5198e6-8952-4603-a64b-fcbf97b7228b)
+
+
+
+
+
+
 
 ### Current state of project
+In terms of parts, we have everything we need and don't expect to need anything in the near future. One of us also has a 3D printer that we have ready access to which we will use for making the case so there shouldn't be any problems.
+
+We haven't been able to read data from an SD card yet which we expected to be the hardest part of this project. We intend to work on this throughout this weekend to fix this problem and get it reading txt files first, and then read WAV files from the SD card. The problem is that the SD card isn't being recognized which we suspect is an issue with our setup.
 
 ### Next week's plan
+1. Reading data from the SD card <br>
+   a. We expect this to take another 5 hours. Debugging the code is taking a long time and requires use to better understand the FATfs library for file management.  <br>
+   b. Patrick and Praise  <br>
+   c. When we run the example code provided by the FATfs library for AVR, we want that when we write "fl /" to the serial terminal to see a return of FR_OKAY and of the    folders in the SD card.  <br>
+   d. Since we are listening to music from SD card readings, we need our Atmega328pb board to be able to extract music data from an SD card and play it later. To accomplish this, we need to utilize a file management system that lets us select specific files and which we will then read and use to play music. We were able to find code online that we can use as a file management system, but reading and understanding the code has taken a long time. We are also configuring the code that we found online to fit our device as well as our needs. We need to make sure that this completely works before we can start playing data and doing other things. If reading from the SD card doesn't work by Monday, we are planning to use data from the cloud instead by using an ESP32 and sending data from there into the STM32. <br> <br> 
+   
+2. Integrate data reading from SD card onto STM  <br>
+   a. We expect this to take 3 hours. Once we have data reading from SD card onto the AVR, we can easily shift it onto the STM32 given we change some of the input / output ports.   <br>
+   b. Praise  <br>
+   c. We want the STM to be able to read data from our input on an SD card and then to print the names of the files inside of the SD card.  <br>
+   d. We need to make sure that the STM is able to read data in the same way as we program the AVR.  <br>  <br>
+
+3. Playing music from data read on STM  <br>
+  a. We expect this to take 5 hours. Once we are able to read data from the SD card onto the STM, we need to be able to interpret that data and play it on our mono speaker  <br>
+  b. Claren and Patrick  <br>
+  c. We ultimately want to play a simple song (like twinkle twinkle) and see if we are able to play it through our mono speaker. We want the sound quality to be recognizable.  <br>
+  d. This is one of the more essential parts of our project, we need to be able to play music that we read from the STM. This will involve getting the data from the WAV files that we load onto our STM and being able to convert them to frequencies to play on our speaker.   <br> <br>
+
+4. CADing a case to contain everything <br>
+   a. We expect this to take 8 hours. We need to CAD a case both large enough to contain all of our components while also being small enough that can be handheld. <br>
+   b. Patrick
+   c. For this task to be finished, I want to have created a CAD that contains all of our components within.
+   d. This is a very important step in terms of creating housing for our device. We need to start early in terms of building our case because we will probably want to iterate in the future and printing will take a lot of time.
+
+## Praise
+I have been setting up our STM32 project and writing the initialization code for all the essential peripherals. This includes configuration for GPIOs, I2C, SPI, timers, and syscalls, which form the foundation of our embedded application. The SPI interface is still undergoing testing: I attempted to communicate with the ICM-20948 IMU using SPI, and so far, I have received 0x0F as a response when reading the WHO_AM_I register, which suggests a fault or misconfiguration. I am currently debugging this by checking the SPI settings (mode, prescaler, CS handling) and verifying physical connections.
+
+In parallel, I have also been working on the LCD module. It is partially functional—some data is being displayed, but the refresh rate is too low, and output only appears on half of the screen. I suspect this is due to incomplete initialization, possibly missing one or more commands required by the LCD controller’s startup sequence. I am currently cross-referencing the controller datasheet with the initialization routine.
+
+To speed up development and reduce iteration time, I created a simulation workspace on my laptop that uses SDL graphics to simulate the GUI. This allows us to test the visual components of the UI before deploying them on hardware. The SDL environment is functioning properly and mimics our target LCD resolution and layout.
+
+Lastly, I wrote a bitmap-to-pixel conversion utility to convert any image into the pixel array format required by our LCD driver. This will make it much easier to render static images or UI elements such as logos or backgrounds.
+
+I’ll upload screenshots of the partial LCD display and simulated GUI once we finalize the layout. The current SPI and LCD code is being refined and will be pushed to GitHub once it stabilizes.
+
+!['GUI'](gui.png)
+
+## Next week's plan
+
+Fix SPI communication with IMU (ICM-20948)
+
+a. Estimated time: 4 hours
+
+b. Assigned to: Praise
+
+c. Definition of done: Reading the correct WHO_AM_I value (0xEA) from the IMU via SPI consistently.
+
+d. Detailed: This involves confirming SPI timing, polarity, and chip-select handling. If needed, I’ll use a logic analyzer to verify the signals.
+
+Debug and finalize LCD initialization
+
+a. Estimated time: 5 hours
+
+b. Assigned to: Praise
+
+c. Definition of done: Full-screen content is displayed correctly with stable refresh rates and no visible flickering.
+
+d. Detailed: I’ll review command sequences from the datasheet and compare them with known-good examples online. If the issue persists, I will test alternate initialization sequences.
+
+## Push finalized SPI and LCD code to GitHub
+
+a. Estimated time: 1 hour
+b. Assigned to: Praise
+c. Definition of done: SPI and LCD drivers are committed with documentation and usage examples in the repository.
+d. Detailed: I will add comments and organize the code into modular drivers with initialization and usage APIs.
+
+Integrate LCD GUI elements using SDL simulation output
+
+a. Estimated time: 3 hours
+b. Assigned to: Praise
+c. Definition of done: At least two GUI screens (e.g., boot screen and music selection screen) working in the simulation and partially on the real LCD.
+d. Detailed: I will transfer the screen logic from SDL to the hardware LCD once it displays correctly in the simulation. 
 
 ## Sprint Review #2
 
