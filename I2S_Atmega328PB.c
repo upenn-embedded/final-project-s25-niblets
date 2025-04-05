@@ -15,6 +15,17 @@ volatile uint8_t sample_ready = 0;
 volatile uint16_t counter = 0;
 volatile char buff[20];
 
+/*
+ Connections Guide
+ INMP 441 -> ATMEGA328PB
+ GND -> GND
+ VDD -> 3V3
+ SDA -> PD2
+ SCK -> PD1
+ WS -> PB1
+ L/R -> GND
+ */
+
 // BCK falling edge interrupt
 ISR(PCINT2_vect) {
     if (!(PIND & (1 << PD5))) {          // Check falling edge
