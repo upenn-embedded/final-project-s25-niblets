@@ -263,6 +263,8 @@ I have also been compiling the CAD parts that we would be using with our project
 We have all the necessary parts to move forward with our project and it is just a matter of integration.
 
 **Patrick** - On my end, I think there’s been good progress with using I2C and now need to integrate the readings from the gyroscope with the LCD screen display flipping once we have the display working with the STM32. I will then need to work with Claren in order to integrate his GUI work with our current design.
+**Praise**
+I have successfully played audio through a speaker using the I²S protocol via STM32 HAL. I have also implemented the FATFS file system on HAL and verified correct reading of WAV files and sampling frequency. I am currently transitioning to a bare-metal implementation of the I²S protocol and will soon begin work on microphone integration, with the goal of playing audio directly from an SD card using DMA transfers.
 
 ### Next week's plan
 
@@ -284,6 +286,24 @@ We have all the necessary parts to move forward with our project and it is just 
    b. Assigned to: Patrick and Claren <br/>
    c. Definition of done: Image and buttons that Claren built for GUI displayed on physical LCD screen. <br/>
    d. Once we finish both the LCD screen setup and the GUI design, we will look to integrate the two together by actually showing the GUI design on the LCD screen. We expect this to take some time given that there may be difficulties displaying images that we have set up on the GUI, but given that (Claren and Patrick) will have spent a lot of time working with both components, we don’t think it will take more than 2 hours to get a working prototype.
+
+4. **Bare-metal I2S Playback (Speaker Audio Output)**
+Estimated Time: 3–4 hours
+Assigned to: Praise
+Definition of Done: Audio file played from STM32 via I2S in bare-metal (non-HAL) implementation.
+Details: You’ve successfully tested the speaker output using I2S with HAL and verified the playback frequency. Now, the task is to migrate the I2S speaker playback logic to a fully bare-metal implementation. This will involve configuring the I2S peripheral registers directly and ensuring audio data from memory is sent reliably using DMA or polling.
+
+6. **Bare-metal I2S Input (Microphone Integration)**
+Estimated Time: 3–4 hours
+Assigned to: Praise
+Definition of Done: Raw data successfully read from the INMP441 microphone using I2S in bare-metal.
+Details: With I2S output working, the next step is to read input from the INMP441 MEMS microphone. This involves configuring I2S in receive mode, validating microphone connection, and verifying data integrity. The microphone's PDM output must be captured properly and can be visualized (e.g., via UART output) for debugging.
+
+7. **SD Card Playback Integration**
+Estimated Time: 4 hours
+Assigned to: Praise
+Definition of Done: WAV or raw audio file is read from SD card and played through the speaker.
+Details: You've already implemented FATFS over SPI and can read/write to the SD card. The task now is to stream audio from the SD card to the speaker using I2S. This will involve managing file reading in chunks and possibly using DMA to maintain continuous playback. You may also need to parse WAV headers if you're using standard audio files.
 
 
 ## MVP Demo
