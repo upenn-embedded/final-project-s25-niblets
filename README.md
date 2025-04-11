@@ -263,6 +263,7 @@ I have also been compiling the CAD parts that we would be using with our project
 We have all the necessary parts to move forward with our project and it is just a matter of integration.
 
 **Patrick** - On my end, I think there’s been good progress with using I2C and now need to integrate the readings from the gyroscope with the LCD screen display flipping once we have the display working with the STM32. I will then need to work with Claren in order to integrate his GUI work with our current design.
+
 **Praise**
 I have successfully played audio through a speaker using the I²S protocol via STM32 HAL. I have also implemented the FATFS file system on HAL and verified correct reading of WAV files and sampling frequency. I am currently transitioning to a bare-metal implementation of the I²S protocol and will soon begin work on microphone integration, with the goal of playing audio directly from an SD card using DMA transfers.
 
