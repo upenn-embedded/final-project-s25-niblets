@@ -242,9 +242,36 @@ Claren - For this week I focused on designing the user interface and designing t
 
 Task: Upload images
 
+**Patrick** - This week I worked on making sure that we had working I2C readings from the IMU and the STM32. Specifically, I focused on configuring gyroscopic readings from the IMU and being able to print those values to the serial terminal. I was able to achieve this by using the STM32’s built in HAL library to send and receive data through I2C. I was then able to obtain gyroscopic readings with some slight bias that we expect can be corrected.
+
+I also spent some time thinking through how we might want to integrate the IMU as a screen flipper onto our device. I realized that it would be really difficult to constantly track the roll, pitch, and yaw of our device, so I decided it would be easier to track large movements in angular velocity to use as our metrics for screen flipping instead. In this way, the user could initiate a flip by flipping the device quickly in one direction and would not require a lot of recalibration. This would be the next step in our project in adding a rotating screen.
+
+![image](https://github.com/user-attachments/assets/3839f130-7169-49a6-a548-49cd5b3ba120)
+
+A video of our implementation of the IMU is shown below.
+https://drive.google.com/file/d/1kdk18VxoSriLACKgJFGk2Km8MMnqj_ot/view?usp=sharing
+
+We have also been working on getting the STM to work with our LCD screen. The issue with the integration so far has been that the original LCD screen we wanted to use had some technical errors, so we are reverting to the screens that we worked with in class. We are working through this by using the libraries we used in class and going from there.
+
+I have also been compiling the CAD parts that we would be using with our project to prepare for CAD-ing for our case. I’ve found most of the parts as STEP files which would be good for using with Fusion.
+
+![image](https://github.com/user-attachments/assets/d98687bd-3ab1-436d-abc2-df19e2d503cb)
+
+
 ### Current state of project
 
+We have all the necessary parts to move forward with our project and it is just a matter of integration.
+
+**Patrick** - On my end, I think there’s been good progress with using I2C and now need to integrate the readings from the gyroscope with the LCD screen display flipping once we have the display working with the STM32. I will then need to work with Claren in order to integrate his GUI work with our current design.
+
 ### Next week's plan
+
+1. **IMU Work** - We need to make sure that we are using the readings from the IMU to actually flip the screen. That means taking time to understand how the roll, pitch, and yaw could actually work together to interpret which way the LCD screen should be facing (downward, upward, sideways some way). I think this will take 3 hours to figure out and program orientation flips into. <br/>
+
+2. **LCD Screen Working** - We need to integrate our LCD screen with our STM32. Since we are using the code from our worksheet 3 lab, I don’t expect this task to take a long time, and I think we will be able to configure the LCD screen with letters printed on it in 3 hours. For this task to be completed, we should have the LCD screen displaying the name of a song we are planning to play. <br/>
+
+3. **Integration of GUI with LCD Screen** - Once we finish both the LCD screen setup and the GUI design, we will look to integrate the two together by actually showing the GUI design on the LCD screen. We expect this to take some time given that there may be difficulties displaying images that we have set up on the GUI, but given that (Claren and Patrick) will have spent a lot of time working with both components, we don’t think it will take more than 2 hours to get a working prototype. <br/>
+
 
 ## MVP Demo
 
