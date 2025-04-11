@@ -238,6 +238,10 @@ The bulk of the work is to configure the hardware we have to our microcontroller
 
 ### Last week's progress
 
+Claren - For this week I focused on designing the user interface and designing the functionality. This involved adding more versatile functions to the SDL_GFX.h library to improve our flexibility in laying out our button design. We then tested the design on a simulation that we developed on our laptops to reduce the amount of time to test and simplify the process. Afterwards, the GUI can be uploaded into the MCU and ran on the LCD. The images of the GUI are shown below:
+
+Task: Upload images
+
 ### Current state of project
 
 ### Next week's plan
