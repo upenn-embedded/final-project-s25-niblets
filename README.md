@@ -266,11 +266,24 @@ We have all the necessary parts to move forward with our project and it is just 
 
 ### Next week's plan
 
-1. **IMU Work** - We need to make sure that we are using the readings from the IMU to actually flip the screen. That means taking time to understand how the roll, pitch, and yaw could actually work together to interpret which way the LCD screen should be facing (downward, upward, sideways some way). I think this will take 3 hours to figure out and program orientation flips into. <br/>
 
-2. **LCD Screen Working** - We need to integrate our LCD screen with our STM32. Since we are using the code from our worksheet 3 lab, I don’t expect this task to take a long time, and I think we will be able to configure the LCD screen with letters printed on it in 3 hours. For this task to be completed, we should have the LCD screen displaying the name of a song we are planning to play. <br/>
+1. **IMU Detecting Screen Rotations** <br/>
+   a. Estimated time: 3 hours<br/>
+   b. Assigned to: Patrick <br/>
+   c. Definition of done: IMU prints which direction the screen should flip to if enough angular change in one direction is sensed. .<br/>
+   d. Detailed: We need to make sure that we are using the readings from the IMU to actually flip the screen. That means taking time to understand how the roll, pitch, and yaw could actually work together to interpret which way the LCD screen should be facing (downward, upward, sideways some way). I think this will take 3 hours to figure out and program orientation flips into. <br/><br/>
 
-3. **Integration of GUI with LCD Screen** - Once we finish both the LCD screen setup and the GUI design, we will look to integrate the two together by actually showing the GUI design on the LCD screen. We expect this to take some time given that there may be difficulties displaying images that we have set up on the GUI, but given that (Claren and Patrick) will have spent a lot of time working with both components, we don’t think it will take more than 2 hours to get a working prototype. <br/>
+2. **LCD Screen Working with STM32** <br/>
+   a. Estimated time: 3 hours <br/>
+   b. Assigned to: Patrick <br/>
+   c. Definition of done: For this task to be completed, we should have the LCD screen displaying the name of a song we are planning to play. <br/>
+   d. We need to integrate our LCD screen with our STM32. Since we are using the code from our worksheet 3 lab, I don’t expect this task to take a long time, and I think we will be able to configure the LCD screen with letters printed on it in 3 hours. <br/> <br/>
+
+3. **Integration of GUI with LCD Screen** <br/>
+   a. Estimated time: 2 hours <br/>
+   b. Assigned to: Patrick and Claren <br/>
+   c. Definition of done: Image and buttons that Claren built for GUI displayed on physical LCD screen. <br/>
+   d. Once we finish both the LCD screen setup and the GUI design, we will look to integrate the two together by actually showing the GUI design on the LCD screen. We expect this to take some time given that there may be difficulties displaying images that we have set up on the GUI, but given that (Claren and Patrick) will have spent a lot of time working with both components, we don’t think it will take more than 2 hours to get a working prototype.
 
 
 ## MVP Demo
