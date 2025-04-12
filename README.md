@@ -240,8 +240,6 @@ The bulk of the work is to configure the hardware we have to our microcontroller
 
 Claren - For this week I focused on designing the user interface and designing the functionality. This involved adding more versatile functions to the SDL_GFX.h library to improve our flexibility in laying out our button design. We then tested the design on a simulation that we developed on our laptops to reduce the amount of time to test and simplify the process. Afterwards, the GUI can be uploaded into the MCU and ran on the LCD. The images of the GUI are shown below:
 
-Task: Upload images
-
 **Patrick** - This week I worked on making sure that we had working I2C readings from the IMU and the STM32. Specifically, I focused on configuring gyroscopic readings from the IMU and being able to print those values to the serial terminal. I was able to achieve this by using the STM32’s built in HAL library to send and receive data through I2C. I was then able to obtain gyroscopic readings with some slight bias that we expect can be corrected.
 
 I also spent some time thinking through how we might want to integrate the IMU as a screen flipper onto our device. I realized that it would be really difficult to constantly track the roll, pitch, and yaw of our device, so I decided it would be easier to track large movements in angular velocity to use as our metrics for screen flipping instead. In this way, the user could initiate a flip by flipping the device quickly in one direction and would not require a lot of recalibration. This would be the next step in our project in adding a rotating screen.
@@ -296,13 +294,13 @@ Details: You’ve successfully tested the speaker output using I2S with HAL and 
 
 6. **Bare-metal I2S Input (Microphone Integration)**
 Estimated Time: 3–4 hours
-Assigned to: Praise
+Assigned to: Praise, Claren
 Definition of Done: Raw data successfully read from the INMP441 microphone using I2S in bare-metal.
 Details: With I2S output working, the next step is to read input from the INMP441 MEMS microphone. This involves configuring I2S in receive mode, validating microphone connection, and verifying data integrity. The microphone's PDM output must be captured properly and can be visualized (e.g., via UART output) for debugging.
 
 7. **SD Card Playback Integration**
 Estimated Time: 4 hours
-Assigned to: Praise
+Assigned to: Praise, Claren
 Definition of Done: WAV or raw audio file is read from SD card and played through the speaker.
 Details: You've already implemented FATFS over SPI and can read/write to the SD card. The task now is to stream audio from the SD card to the speaker using I2S. This will involve managing file reading in chunks and possibly using DMA to maintain continuous playback. You may also need to parse WAV headers if you're using standard audio files.
 
