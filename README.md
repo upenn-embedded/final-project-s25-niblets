@@ -264,6 +264,8 @@ I have also been compiling the CAD parts that we would be using with our project
 
 ![image](https://github.com/user-attachments/assets/d98687bd-3ab1-436d-abc2-df19e2d503cb)
 
+**Praise**
+I have been working with being able to play audio through the STM32 with stereo speakers and was able to due so this week with our amplifiers. Here is a link to a video of our speakers playing a short snipped of music: https://drive.google.com/file/d/11OGU_7PfAK1LRACp8a9eyxocnXaY17er/view?usp=sharing. Additionally, I have been working on building out a SPI connection so that we can connect to our LCD screen. I've succesfully tested SPI communication with our IMU so we know that the functions I wrote for SPI communication do work. Patrick will handle the integration of the SPI with LCD from here.
 
 ### Current state of project
 
