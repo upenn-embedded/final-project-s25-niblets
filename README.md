@@ -240,6 +240,15 @@ The bulk of the work is to configure the hardware we have to our microcontroller
 
 Claren - For this week I focused on designing the user interface and designing the functionality. This involved adding more versatile functions to the SDL_GFX.h library to improve our flexibility in laying out our button design. We then tested the design on a simulation that we developed on our laptops to reduce the amount of time to test and simplify the process. Afterwards, the GUI can be uploaded into the MCU and ran on the LCD. The images of the GUI are shown below:
 
+Initial design:
+
+![Screenshot 2025-04-11 at 9 56 45 PM](https://github.com/user-attachments/assets/9c0e4da3-fd03-4e1e-86b2-c697cccd876f)
+
+Second design:
+
+![Screenshot 2025-04-11 at 9 54 16 PM](https://github.com/user-attachments/assets/178de867-26d3-4ec9-86e5-8886c9a1f9f0)
+
+
 **Patrick** - This week I worked on making sure that we had working I2C readings from the IMU and the STM32. Specifically, I focused on configuring gyroscopic readings from the IMU and being able to print those values to the serial terminal. I was able to achieve this by using the STM32’s built in HAL library to send and receive data through I2C. I was then able to obtain gyroscopic readings with some slight bias that we expect can be corrected.
 
 I also spent some time thinking through how we might want to integrate the IMU as a screen flipper onto our device. I realized that it would be really difficult to constantly track the roll, pitch, and yaw of our device, so I decided it would be easier to track large movements in angular velocity to use as our metrics for screen flipping instead. In this way, the user could initiate a flip by flipping the device quickly in one direction and would not require a lot of recalibration. This would be the next step in our project in adding a rotating screen.
