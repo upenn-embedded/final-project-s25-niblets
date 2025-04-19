@@ -316,7 +316,7 @@ Details: You've already implemented FATFS over SPI and can read/write to the SD 
 
 ## MVP Demo
 
-1. Show a system block diagram & explain the hardware implementation.
+1. Show a system block diagram & explain the hardware implementation. <br/>
 ![46391](https://github.com/user-attachments/assets/0bd6add3-5691-46d4-bc84-ddb02766cde4)
 
 We begin the hardware explanation at the top with our power supply. We are using 3 AA batteries to supply 4.5V that will convert the voltage to 5V using a buck boost converter board to power the STM32 F66RE.
@@ -337,7 +337,7 @@ Using the same SPI code that we’ve written as well as FATfs documentation onli
 
 Videos showing each part of our implementation can be found in part 3 (demo your device). <br/>
 
-3. Demo your device.
+3. Demo your device. <br/>
 https://drive.google.com/file/d/1J0Waj7R3mdgtPhNjFtGgTsGZcaNHi4xN/view?usp=sharing <br/>
 https://drive.google.com/file/d/1xMNJZlLbZlbjtCoF0PGdAjgAC8qPPgzw/view?usp=sharing <br/>
 https://drive.google.com/file/d/1ABjZcdwRX6afHHr8z1_RlbBKv2L5fbjk/view?usp=sharing <br/>
@@ -358,7 +358,7 @@ SRS-04: The microcontroller is interfacing with all of our components besides ou
 
 SRS-05: We have built the GUI on our own without loading it onto the LCD screen yet. We have loaded the code for rendering our designs and know that they work with our device. We are still in the stages of integrating the user interface completely, but know that the most important part (rendering information and text) works on the LCD. <br/>
 
-5. Have you achieved some or all of your Hardware Requirements Specification (HRS)?
+5. Have you achieved some or all of your Hardware Requirements Specification (HRS)? <br/>
 HRS-01: The LCD screen is working as intended with resolutions of 180 by 128. We were able to complete this by using the ST7735 that we learned how to use in class. We then loaded an image (our intended background image) onto the device and had the LCD screen display that image. We needed to scale down our original hardware goals of using a touch screen sensor since using the larger device screen size would eat into too much of our device memory and we didn’t feel it was an essential part of our device application. Look to the device demo section to see the image rendering on our LCD screen. <br/>
 
 HRS-02: Yes, we were able to read using the SD card. This was also part of our software implementation since we needed an actual hardware system for loading songs in. For our current implementation, we have soldered all of our devices onto a small prototype board that we are going to fit inside our 3D print. <br/>
@@ -373,9 +373,9 @@ We timed the device readings per second sent to UART and found 22 readings per s
 
 HRS-05: We installed a buck boost converted board into our design that can take 3-12V supply and convert it into our required output. We tested using the buck boost converter with the lab power source and with the lab multimeter and were able to find that the buck boost converter was highly efficient. We then determined the configuration to power our STM32 (changed its jumper configurations) and found that the required current to power the device was low meaning that supply from batteries is likely sufficient for our device. We found that all of the device’s capabilities worked from 3V to 6V which is good news for us. <br/>
 
-HRS-06: The final part of our project to implement is to add the buttons for interfacing with our LCD screen. We will add these buttons right after we finish getting our read / write speeds up to their required levels for playing any quality of music since that is the most important part of our project.  
+HRS-06: The final part of our project to implement is to add the buttons for interfacing with our LCD screen. We will add these buttons right after we finish getting our read / write speeds up to their required levels for playing any quality of music since that is the most important part of our project.  <br/>
 
-6. Show off the remaining elements that will make your project whole: mechanical casework, supporting graphical user interface (GUI), web portal, etc.
+6. Show off the remaining elements that will make your project whole: mechanical casework, supporting graphical user interface (GUI), web portal, etc. <br/>
 There are a few things that will complete our project. Obviously, there is still the read/write issue that we intend to fix by the end of this weekend. After that issue is fixed, we intend to address a few more issues.
 <br/>
 
@@ -385,8 +385,8 @@ Case. We will need to print a 3D case to house our device. Patrick has a 3D prin
 
 Website. We want to make a website for this project that will allow the user to convert the songs they find into a file that can be processed by our microcontroller. Since we aren’t using MP4 or WAV files, we need to ensure that the user can actually select songs they want to play and put them onto the SD card. We intend to make a website that will allow them to convert their WAV songs into files that work with our microcontroller configuration. <br/>
 
-7. What is the riskiest part remaining of your project?
-The riskiest part of our project right now is that reading from the SD card is slower than we expected.
+7. What is the riskiest part remaining of your project? <br/>
+The riskiest part of our project right now is that reading from the SD card is slower than we expected. <br/>
    1. How do you plan to de-risk this? <br/>
 Since this is the final missing major component for us before we are ready to build an enclosure and assemble a final product, our goal is to focus all of our energy into finding a solution to this problem. 
 If we aren’t able to find a viable solution, we’re planning a few alternative options. <br/>
@@ -394,7 +394,7 @@ The first solution is to further downsample our songs so that we have less bytes
 If downsampling doesn’t work, then we intend to maximize our SRAM usage by playing shorter pieces of music (instead of full length songs). We would play 20 second snippets of songs and accomplish this by storing as much of the song as possible onto our RAM. Once we fill up the majority of our RAM, we would use a queue structure so that we can load more data into our RAM and keep track of where the speaker is currently playing. We’d prefer not to use this option since we would no longer be able to play an entire song. <br/>
 Finally, we are considering re-installing the microphone and changing the functionality of the device to just allow the user to just record what they are saying for a few seconds instead of playing music. We will keep trying to turn down the sample rate and will try our second option. If neither works, then we will likely have to turn to this option, which we don’t expect to take a long time since every other part of our device is already working. <br/>
 
-8. What questions or help do you need from the teaching team?
+8. What questions or help do you need from the teaching team? <br/>
 We just need any suggestions on how to get a faster read / write speed out of our SD card reader. Everything else is basically fully built out and ready to be integrated into our device. Once we have that working with the music playing, we will only have to worry about integration. 
 
 ## Final Project Report
