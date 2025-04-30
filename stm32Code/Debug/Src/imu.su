@@ -1,3 +1,0 @@
-../Src/imu.c:10:6:imu_read	16	static
-../Src/imu.c:24:6:imu_write	24	static
-../Src/imu.c:38:6:imu_init	8	static

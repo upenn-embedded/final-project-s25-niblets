@@ -1,3 +1,0 @@
-../Src/imu.c:10:6:imu_read	1
-../Src/imu.c:24:6:imu_write	1
-../Src/imu.c:38:6:imu_init	1
