@@ -6,7 +6,7 @@
 * Team Name: Niblets
 * Team Members: Claren Ogira, Patrick Zhao, Praise Ndlovu
 * GitHub Repository URL: https://github.com/upenn-embedded/final-project-s25-niblets
-* GitHub Pages Website URL: nibbles-3500.github.io/
+* GitHub Pages Website URL: https://nibbles-3500.github.io/
 
 ## Final Project Proposal
 
@@ -206,7 +206,7 @@ The bulk of the work is to configure the hardware we have to our microcontroller
 
    c. Definition of done: Reading the correct WHO_AM_I value (0xEA) from the IMU via SPI consistently.`<br>`
 
-   d. Detailed: This involves confirming SPI timing, polarity, and chip-select handling. If needed, I’ll use a logic analyzer to verify the signals.`<br><br>```
+   d. Detailed: This involves confirming SPI timing, polarity, and chip-select handling. If needed, I’ll use a logic analyzer to verify the signals.``<br><br>````
 6. Debug and finalize LCD initialization `<br>`
 
    a. Estimated time: 5 hours `<br>`
@@ -273,7 +273,7 @@ I have successfully played audio through a speaker using the I²S protocol via S
 ### Next week's plan
 
 1. **IMU Detecting Screen Rotations** `<br/>`
-   a. Estimated time: 3 hours`<br/>`
+   a. Estimated time: 3 hours `<br/>`
    b. Assigned to: Patrick `<br/>`
    c. Definition of done: IMU prints which direction the screen should flip to if enough angular change in one direction is sensed. .`<br/>`
    d. Detailed: We need to make sure that we are using the readings from the IMU to actually flip the screen. That means taking time to understand how the roll, pitch, and yaw could actually work together to interpret which way the LCD screen should be facing (downward, upward, sideways some way). I think this will take 3 hours to figure out and program orientation flips into. `<br/><br/>`
