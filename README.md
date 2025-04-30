@@ -6,7 +6,7 @@
 * Team Name: Niblets
 * Team Members: Claren Ogira, Patrick Zhao, Praise Ndlovu
 * GitHub Repository URL: https://github.com/upenn-embedded/final-project-s25-niblets
-* GitHub Pages Website URL: [for final submission]
+* GitHub Pages Website URL: nibbles-3500.github.io/
 
 ## Final Project Proposal
 
@@ -50,24 +50,24 @@ Here, you will define any special terms, acronyms, or abbreviations you plan to 
 
 **5.2 Functionality**
 
-| ID                                             | Description                                                                                                                                                                                                                                                                                        |
-| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SRS-01 - LCD Display Functionality             | The LCD must accurately render graphics and display the current state of the iPod, including menus, playback status, and user interactions.**Validation**: Verify display clarity, responsiveness, and update rate during different operations. To quantify this, we would like to see the signals sent from the LCD display being received at the correct speeds correspond to appropiate MCU clock speeds and any scaling we use. |
-| SRS-02 SD Card Storage & Read/Write Operations | The SD card module must support reading and writing data efficiently, ensuring reliable storage of music, recorded audio, and system logs.**Validation** Conduct read/write speed tests, check file integrity, and test compatibility with different SD card sizes.  We want to ensure that our SD card is reading and writing at at least 100kHz to ensure that there is enough buffer time for music to be loaded onto the device. |
-| SRS-03  Speaker Audio Output                   | The speaker must play sound accurately and at a sufficient volume without distortion when provided with an audio signal.**Validation** Measure frequency response, output power, and signal clarity under different playback conditions. We want to measure the frequency of the audio coming from the speaker and ensure that it is with our expectation of the notes that we are playing / the sampled beats per second that we are expecting.                                               |
-| SRS-04  Microcontroller (MCU) Interfacing      | The microcontrollers must communicate seamlessly with each other and with peripherals such as the LCD, microphone, SD card, and speaker.**Validation** Perform communication protocol tests (e.g., I2C, SPI, UART), measure data transfer latency, and ensure stability under various loads. We will want to test this by ensuring that the communication reates with our devices are correct and are as expected. |
-| SRS-05  User Interface Responsiveness          | The system shall provide an intuitive and responsive user interface for navigation and control.**Validation** Test button responsiveness, menu transitions, and overall usability during different operations. This will be tested by interacting with the device and ensuring that all of the required capabilities mentioned above are integrated into one device without new code configurations. |
+| ID                                             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| SRS-01 - LCD Display Functionality             | The LCD must accurately render graphics and display the current state of the iPod, including menus, playback status, and user interactions.**Validation**: Verify display clarity, responsiveness, and update rate during different operations. To quantify this, we would like to see the signals sent from the LCD display being received at the correct speeds correspond to appropiate MCU clock speeds and any scaling we use.              |
+| SRS-02 SD Card Storage & Read/Write Operations | The SD card module must support reading and writing data efficiently, ensuring reliable storage of music, recorded audio, and system logs.**Validation** Conduct read/write speed tests, check file integrity, and test compatibility with different SD card sizes.  We want to ensure that our SD card is reading and writing at at least 100kHz to ensure that there is enough buffer time for music to be loaded onto the device.             |
+| SRS-03  Speaker Audio Output                   | The speaker must play sound accurately and at a sufficient volume without distortion when provided with an audio signal.**Validation** Measure frequency response, output power, and signal clarity under different playback conditions. We want to measure the frequency of the audio coming from the speaker and ensure that it is with our expectation of the notes that we are playing / the sampled beats per second that we are expecting. |
+| SRS-04  Microcontroller (MCU) Interfacing      | The microcontrollers must communicate seamlessly with each other and with peripherals such as the LCD, microphone, SD card, and speaker.**Validation** Perform communication protocol tests (e.g., I2C, SPI, UART), measure data transfer latency, and ensure stability under various loads. We will want to test this by ensuring that the communication reates with our devices are correct and are as expected.                               |
+| SRS-05  User Interface Responsiveness          | The system shall provide an intuitive and responsive user interface for navigation and control.**Validation** Test button responsiveness, menu transitions, and overall usability during different operations. This will be tested by interacting with the device and ensuring that all of the required capabilities mentioned above are integrated into one device without new code configurations.                                             |
 
 ### 6. Hardware Requirements Specification (HRS)
 
-| ID                                         | Description                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| HRS-01 - LCD Display                       | The LCD display must have a minimum resolution of 128 x 180 pixels and support clear, legible display of menus, playback status, and user interactions**Validation**: Verify display clarity, resolution, and update rate during different operations. We will test this by ensuringt that the communication rate between the device and the LCD are correct and by seeing if we are able to render downsampled images onto our device at 20k bytes.                             |
-| HRS-02 - SD Card Module                    | The SD card module must support reading and writing at fast speeds to efficiently handle large files such as audio and system logs.**Validation**: Conduct read/write speed tests, check file integrity, and test compatibility with different SD card sizes We will want to validate this by testing the read / write speed from SD card device to ensure that it is above 100kHz.                              |
-| HRS-03 - Speaker                           | The speaker must provide clear and undistorted audio output, with sufficient volume for playback in typical environments.**Validation**: Measure frequency response, output power, and signal clarity under different playback conditions. We will test this by measuring the noise levels produced by our speaker since we will need an amplifier to work with this device. We would like to hit around 30db for the device to be functioning as intended. |
+| ID                                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| HRS-01 - LCD Display                       | The LCD display must have a minimum resolution of 128 x 180 pixels and support clear, legible display of menus, playback status, and user interactions**Validation**: Verify display clarity, resolution, and update rate during different operations. We will test this by ensuringt that the communication rate between the device and the LCD are correct and by seeing if we are able to render downsampled images onto our device at 20k bytes.                                                   |
+| HRS-02 - SD Card Module                    | The SD card module must support reading and writing at fast speeds to efficiently handle large files such as audio and system logs.**Validation**: Conduct read/write speed tests, check file integrity, and test compatibility with different SD card sizes We will want to validate this by testing the read / write speed from SD card device to ensure that it is above 100kHz.                                                                                                                    |
+| HRS-03 - Speaker                           | The speaker must provide clear and undistorted audio output, with sufficient volume for playback in typical environments.**Validation**: Measure frequency response, output power, and signal clarity under different playback conditions. We will test this by measuring the noise levels produced by our speaker since we will need an amplifier to work with this device. We would like to hit around 30db for the device to be functioning as intended.                                            |
 | HRS-04 - Microcontroller (MCU)             | The microcontroller must manage the system’s components, handle user input, audio processing, and communication between peripherals.**Validation**: Perform communication protocol tests (e.g., I2C, SPI, UART), measure data transfer latency, and ensure stability under various loads. In order for this to be functioning correctly, we will measure the communication time of the peripherals that we are using and ensure that they are sampling at a rate that will be required from the user. |
-| HRS-05 - Power Supply                      | The power supply must support efficient power management to ensure optimal device operation and battery longevity.**Validation**: Measure power consumption under different workloads and test battery performance over extended usage.  To test this, we will need to measure the voltage supply and the current supply using an oscliscope to see if it is 5V. To test if current supply is sufficient, we will both measure the supplied current and use the 5V supply to power our device.                                                   |
-| HRS-06 - Buttons & User Interface Controls | Physical buttons or touch interface must allow the user to navigate the system and control media playback and settings.**Validation**: Test button responsiveness, UI transitions, and overall usability during different operations. To test this, we will need to ensure that button responses are processed within 500ms to ensure that there is sufficient responsiveness in our device.                                                    |
+| HRS-05 - Power Supply                      | The power supply must support efficient power management to ensure optimal device operation and battery longevity.**Validation**: Measure power consumption under different workloads and test battery performance over extended usage.  To test this, we will need to measure the voltage supply and the current supply using an oscliscope to see if it is 5V. To test if current supply is sufficient, we will both measure the supplied current and use the 5V supply to power our device.         |
+| HRS-06 - Buttons & User Interface Controls | Physical buttons or touch interface must allow the user to navigate the system and control media playback and settings.**Validation**: Test button responsiveness, UI transitions, and overall usability during different operations. To test this, we will need to ensure that button responses are processed within 500ms to ensure that there is sufficient responsiveness in our device.                                                                                                           |
 
 **6.1 Definitions, Abbreviations**
 
@@ -200,37 +200,34 @@ The bulk of the work is to configure the hardware we have to our microcontroller
    d. This is a very important step in terms of creating housing for our device. We need to start early in terms of building our case because we will probably want to iterate in the future and printing will take a lot of time. `<br>`
 5. Fix SPI communication with IMU (ICM-20948) `<br>`
 
-    a. Estimated time: 4 hours`<br>`
+   a. Estimated time: 4 hours `<br>`
 
-    b. Assigned to: Praise`<br>`
+   b. Assigned to: Praise `<br>`
 
-    c. Definition of done: Reading the correct WHO_AM_I value (0xEA) from the IMU via SPI consistently.`<br>`
+   c. Definition of done: Reading the correct WHO_AM_I value (0xEA) from the IMU via SPI consistently.`<br>`
 
-    d. Detailed: This involves confirming SPI timing, polarity, and chip-select handling. If needed, I’ll use a logic analyzer to verify the signals.`<br>`<br>``
-
+   d. Detailed: This involves confirming SPI timing, polarity, and chip-select handling. If needed, I’ll use a logic analyzer to verify the signals.`<br><br>```
 6. Debug and finalize LCD initialization `<br>`
 
-    a. Estimated time: 5 hours`<br>`
+   a. Estimated time: 5 hours `<br>`
 
-    b. Assigned to: Praise`<br>`
+   b. Assigned to: Praise `<br>`
 
-    c. Definition of done: Full-screen content is displayed correctly with stable refresh rates and no visible flickering.`<br>`
+   c. Definition of done: Full-screen content is displayed correctly with stable refresh rates and no visible flickering.`<br>`
 
-    d. Detailed: I’ll review command sequences from the datasheet and compare them with known-good examples online. If the issue persists, I will test alternate initialization sequences.`<br><br>`
-
+   d. Detailed: I’ll review command sequences from the datasheet and compare them with known-good examples online. If the issue persists, I will test alternate initialization sequences.`<br><br>`
 7. Push finalized SPI and LCD code to GitHub `<br>`
 
-    a. Estimated time: 1 hour`<br>`
-    b. Assigned to: Praise `<br>`
-    c. Definition of done: SPI and LCD drivers are committed with documentation and usage examples in the repository.`<br>`
-    d. Detailed: I will add comments and organize the code into modular drivers with initialization and usage APIs.`<br><br>`
+   a. Estimated time: 1 hour `<br>`
+   b. Assigned to: Praise `<br>`
+   c. Definition of done: SPI and LCD drivers are committed with documentation and usage examples in the repository.`<br>`
+   d. Detailed: I will add comments and organize the code into modular drivers with initialization and usage APIs.`<br><br>`
+8. Integrate LCD GUI elements using SDL simulation output `<br>`
 
-8. Integrate LCD GUI elements using SDL simulation output `<br>` 
-
-    a. Estimated time: 3 hours`<br>`
-    b. Assigned to: Praise `<br>`
-    c. Definition of done: At least two GUI screens (e.g., boot screen and music selection screen) working in the simulation and partially on the real LCD.`<br>`
-    d. Detailed: I will transfer the screen logic from SDL to the hardware LCD once it displays correctly in the simulation.`<br><br>`
+   a. Estimated time: 3 hours `<br>`
+   b. Assigned to: Praise `<br>`
+   c. Definition of done: At least two GUI screens (e.g., boot screen and music selection screen) working in the simulation and partially on the real LCD.`<br>`
+   d. Detailed: I will transfer the screen logic from SDL to the hardware LCD once it displays correctly in the simulation.`<br><br>`
 
 ## Sprint Review #2
 
@@ -245,7 +242,6 @@ Initial design:
 Second design:
 
 ![Screenshot 2025-04-11 at 9 54 16 PM](https://github.com/user-attachments/assets/178de867-26d3-4ec9-86e5-8886c9a1f9f0)
-
 
 **Patrick** - This week I worked on making sure that we had working I2C readings from the IMU and the STM32. Specifically, I focused on configuring gyroscopic readings from the IMU and being able to print those values to the serial terminal. I was able to achieve this by using the STM32’s built in HAL library to send and receive data through I2C. I was then able to obtain gyroscopic readings with some slight bias that we expect can be corrected.
 
@@ -276,126 +272,118 @@ I have successfully played audio through a speaker using the I²S protocol via S
 
 ### Next week's plan
 
-
-1. **IMU Detecting Screen Rotations** <br/>
-   a. Estimated time: 3 hours<br/>
-   b. Assigned to: Patrick <br/>
-   c. Definition of done: IMU prints which direction the screen should flip to if enough angular change in one direction is sensed. .<br/>
-   d. Detailed: We need to make sure that we are using the readings from the IMU to actually flip the screen. That means taking time to understand how the roll, pitch, and yaw could actually work together to interpret which way the LCD screen should be facing (downward, upward, sideways some way). I think this will take 3 hours to figure out and program orientation flips into. <br/><br/>
-
-2. **LCD Screen Working with STM32** <br/>
-   a. Estimated time: 3 hours <br/>
-   b. Assigned to: Patrick <br/>
-   c. Definition of done: For this task to be completed, we should have the LCD screen displaying the name of a song we are planning to play. <br/>
-   d. We need to integrate our LCD screen with our STM32. Since we are using the code from our worksheet 3 lab, I don’t expect this task to take a long time, and I think we will be able to configure the LCD screen with letters printed on it in 3 hours. <br/> <br/>
-
-3. **Integration of GUI with LCD Screen** <br/>
-   a. Estimated time: 2 hours <br/>
-   b. Assigned to: Patrick and Claren <br/>
-   c. Definition of done: Image and buttons that Claren built for GUI displayed on physical LCD screen. <br/>
+1. **IMU Detecting Screen Rotations** `<br/>`
+   a. Estimated time: 3 hours`<br/>`
+   b. Assigned to: Patrick `<br/>`
+   c. Definition of done: IMU prints which direction the screen should flip to if enough angular change in one direction is sensed. .`<br/>`
+   d. Detailed: We need to make sure that we are using the readings from the IMU to actually flip the screen. That means taking time to understand how the roll, pitch, and yaw could actually work together to interpret which way the LCD screen should be facing (downward, upward, sideways some way). I think this will take 3 hours to figure out and program orientation flips into. `<br/><br/>`
+2. **LCD Screen Working with STM32** `<br/>`
+   a. Estimated time: 3 hours `<br/>`
+   b. Assigned to: Patrick `<br/>`
+   c. Definition of done: For this task to be completed, we should have the LCD screen displaying the name of a song we are planning to play. `<br/>`
+   d. We need to integrate our LCD screen with our STM32. Since we are using the code from our worksheet 3 lab, I don’t expect this task to take a long time, and I think we will be able to configure the LCD screen with letters printed on it in 3 hours. `<br/>` `<br/>`
+3. **Integration of GUI with LCD Screen** `<br/>`
+   a. Estimated time: 2 hours `<br/>`
+   b. Assigned to: Patrick and Claren `<br/>`
+   c. Definition of done: Image and buttons that Claren built for GUI displayed on physical LCD screen. `<br/>`
    d. Once we finish both the LCD screen setup and the GUI design, we will look to integrate the two together by actually showing the GUI design on the LCD screen. We expect this to take some time given that there may be difficulties displaying images that we have set up on the GUI, but given that (Claren and Patrick) will have spent a lot of time working with both components, we don’t think it will take more than 2 hours to get a working prototype.
-
 4. **Bare-metal I2S Playback (Speaker Audio Output)**
-Estimated Time: 3–4 hours
-Assigned to: Praise
-Definition of Done: Audio file played from STM32 via I2S in bare-metal (non-HAL) implementation.
-Details: You’ve successfully tested the speaker output using I2S with HAL and verified the playback frequency. Now, the task is to migrate the I2S speaker playback logic to a fully bare-metal implementation. This will involve configuring the I2S peripheral registers directly and ensuring audio data from memory is sent reliably using DMA or polling.
-
-6. **Bare-metal I2S Input (Microphone Integration)**
-Estimated Time: 3–4 hours
-Assigned to: Praise, Claren
-Definition of Done: Raw data successfully read from the INMP441 microphone using I2S in bare-metal.
-Details: With I2S output working, the next step is to read input from the INMP441 MEMS microphone. This involves configuring I2S in receive mode, validating microphone connection, and verifying data integrity. The microphone's PDM output must be captured properly and can be visualized (e.g., via UART output) for debugging.
-
-7. **SD Card Playback Integration**
-Estimated Time: 4 hours
-Assigned to: Praise, Claren
-Definition of Done: WAV or raw audio file is read from SD card and played through the speaker.
-Details: You've already implemented FATFS over SPI and can read/write to the SD card. The task now is to stream audio from the SD card to the speaker using I2S. This will involve managing file reading in chunks and possibly using DMA to maintain continuous playback. You may also need to parse WAV headers if you're using standard audio files.
-
+   Estimated Time: 3–4 hours
+   Assigned to: Praise
+   Definition of Done: Audio file played from STM32 via I2S in bare-metal (non-HAL) implementation.
+   Details: You’ve successfully tested the speaker output using I2S with HAL and verified the playback frequency. Now, the task is to migrate the I2S speaker playback logic to a fully bare-metal implementation. This will involve configuring the I2S peripheral registers directly and ensuring audio data from memory is sent reliably using DMA or polling.
+5. **Bare-metal I2S Input (Microphone Integration)**
+   Estimated Time: 3–4 hours
+   Assigned to: Praise, Claren
+   Definition of Done: Raw data successfully read from the INMP441 microphone using I2S in bare-metal.
+   Details: With I2S output working, the next step is to read input from the INMP441 MEMS microphone. This involves configuring I2S in receive mode, validating microphone connection, and verifying data integrity. The microphone's PDM output must be captured properly and can be visualized (e.g., via UART output) for debugging.
+6. **SD Card Playback Integration**
+   Estimated Time: 4 hours
+   Assigned to: Praise, Claren
+   Definition of Done: WAV or raw audio file is read from SD card and played through the speaker.
+   Details: You've already implemented FATFS over SPI and can read/write to the SD card. The task now is to stream audio from the SD card to the speaker using I2S. This will involve managing file reading in chunks and possibly using DMA to maintain continuous playback. You may also need to parse WAV headers if you're using standard audio files.
 
 ## MVP Demo
 
-1. Show a system block diagram & explain the hardware implementation. <br/>
-![46391](https://github.com/user-attachments/assets/0bd6add3-5691-46d4-bc84-ddb02766cde4)
+1. Show a system block diagram & explain the hardware implementation. `<br/>`
+   ![46391](https://github.com/user-attachments/assets/0bd6add3-5691-46d4-bc84-ddb02766cde4)
 
 We begin the hardware explanation at the top with our power supply. We are using 3 AA batteries to supply 4.5V that will convert the voltage to 5V using a buck boost converter board to power the STM32 F66RE.
-The STM32 will obtain music data from an SD card reader where communication will be achieved using I2C. The SD card supplies the information to the reader and we intend to build a website to convert people’s WAV songs to the correct format so that people can load songs that they want to play onto the device. <br/>
-The STM32 communicates with the ST7735 using SPI. The ST7735 renders the GUI that allows for user interactions with our device. The LCD will render the name of songs that are stored on the SD card as well as allow the user to play a song, pause a song, skip a song, or go back to a previous song. <br/>
-We will have 3 external buttons that allow the user to control the device functionality. These will be included into the device design using pin interrupts that will allow the user to change what they currently select on their GUI input screen. <br/>
-The IMU communicates with our device using I2C. The IMU is only recording angular velocity data and sends that data to the IMU. If we see that the yaw or pitch changes by a degree per second larger than our set thresholds, we will then rotate the direction of the LCD screen accordingly. <br/>
-Once the user selects a song and decides to play it, the song will be loaded onto the STM32 using a buffer that will then utilize a timer to send the data at the correct rates and correct frequencies to our speaker that is connected to an amplifier. <br/>
+The STM32 will obtain music data from an SD card reader where communication will be achieved using I2C. The SD card supplies the information to the reader and we intend to build a website to convert people’s WAV songs to the correct format so that people can load songs that they want to play onto the device. `<br/>`
+The STM32 communicates with the ST7735 using SPI. The ST7735 renders the GUI that allows for user interactions with our device. The LCD will render the name of songs that are stored on the SD card as well as allow the user to play a song, pause a song, skip a song, or go back to a previous song. `<br/>`
+We will have 3 external buttons that allow the user to control the device functionality. These will be included into the device design using pin interrupts that will allow the user to change what they currently select on their GUI input screen. `<br/>`
+The IMU communicates with our device using I2C. The IMU is only recording angular velocity data and sends that data to the IMU. If we see that the yaw or pitch changes by a degree per second larger than our set thresholds, we will then rotate the direction of the LCD screen accordingly. `<br/>`
+Once the user selects a song and decides to play it, the song will be loaded onto the STM32 using a buffer that will then utilize a timer to send the data at the correct rates and correct frequencies to our speaker that is connected to an amplifier. `<br/>`
 
-2. Explain your firmware implementation, including application logic and critical drivers you've written. <br/>
-In building out our final project, we wanted to ensure that we stuck with the “bare metal” principles of the project. To do so, we wrote our own I2C and SPI code instead of using HAL which meant spending a lot more time digging into data sheets and code functionality information on our own. We were able to get our own I2C and SPI code to work with all of our components (IMU, LCD, SD Card) which we’re really proud of. <br/>
+2. Explain your firmware implementation, including application logic and critical drivers you've written. `<br/>`
+   In building out our final project, we wanted to ensure that we stuck with the “bare metal” principles of the project. To do so, we wrote our own I2C and SPI code instead of using HAL which meant spending a lot more time digging into data sheets and code functionality information on our own. We were able to get our own I2C and SPI code to work with all of our components (IMU, LCD, SD Card) which we’re really proud of. `<br/>`
 
-So in terms of our firmware implementation, we wrote our own I2C code which we are using to communicate with our IMU. We are using the same IMU that we learned in class, so we already knew the peripheral address. We verified the peripheral address by using our implementation of I2C to check for different device peripherals and returning an OK when the corresponding address was reached. We read the I2C at device frequency divided by 64 and ensure sufficient delay times. We measure gyroscope rotations from the device. We are using these gyroscopes to then determine the directional flips of the device. <br/>
+So in terms of our firmware implementation, we wrote our own I2C code which we are using to communicate with our IMU. We are using the same IMU that we learned in class, so we already knew the peripheral address. We verified the peripheral address by using our implementation of I2C to check for different device peripherals and returning an OK when the corresponding address was reached. We read the I2C at device frequency divided by 64 and ensure sufficient delay times. We measure gyroscope rotations from the device. We are using these gyroscopes to then determine the directional flips of the device. `<br/>`
 
-Using the SPI code that we’ve written as well as the ST7735 implementation that we wrote in class, we are able to communicate with our LCD screen. We’ve saved a background image in byte form and are able to print that over our LCD screen. We intend to save a few more images (downsampled to save our flash memory), and display these as we switch screens on the device into different settings. They will be the primary screens in which our songs will be written and played over.<br/>
+Using the SPI code that we’ve written as well as the ST7735 implementation that we wrote in class, we are able to communicate with our LCD screen. We’ve saved a background image in byte form and are able to print that over our LCD screen. We intend to save a few more images (downsampled to save our flash memory), and display these as we switch screens on the device into different settings. They will be the primary screens in which our songs will be written and played over.`<br/>`
 
-Using the same SPI code that we’ve written as well as FATfs documentation online, we wrote code that allows us to read and write from our SD card. Since we need to save processing power on our STM32, we decided that the best course of action for us was to save our songs as bytes that could be directly played by our device. We save these bytes onto our RAM using a memory buffer that extracts data from the SD card at maximum size without interfering with our other operations at a time. This data is then read by our STM and played on our speaker using a timer. The music is played using an amplifier that is configured with our speaker. <br/>
+Using the same SPI code that we’ve written as well as FATfs documentation online, we wrote code that allows us to read and write from our SD card. Since we need to save processing power on our STM32, we decided that the best course of action for us was to save our songs as bytes that could be directly played by our device. We save these bytes onto our RAM using a memory buffer that extracts data from the SD card at maximum size without interfering with our other operations at a time. This data is then read by our STM and played on our speaker using a timer. The music is played using an amplifier that is configured with our speaker. `<br/>`
 
-Videos showing each part of our implementation can be found in part 3 (demo your device). <br/>
+Videos showing each part of our implementation can be found in part 3 (demo your device). `<br/>`
 
-3. Demo your device. <br/>
-https://drive.google.com/file/d/1J0Waj7R3mdgtPhNjFtGgTsGZcaNHi4xN/view?usp=sharing <br/>
-https://drive.google.com/file/d/1xMNJZlLbZlbjtCoF0PGdAjgAC8qPPgzw/view?usp=sharing <br/>
-https://drive.google.com/file/d/1ABjZcdwRX6afHHr8z1_RlbBKv2L5fbjk/view?usp=sharing <br/>
+3. Demo your device. `<br/>`
+   https://drive.google.com/file/d/1J0Waj7R3mdgtPhNjFtGgTsGZcaNHi4xN/view?usp=sharing `<br/>`
+   https://drive.google.com/file/d/1xMNJZlLbZlbjtCoF0PGdAjgAC8qPPgzw/view?usp=sharing `<br/>`
+   https://drive.google.com/file/d/1ABjZcdwRX6afHHr8z1_RlbBKv2L5fbjk/view?usp=sharing `<br/>`
+4. Have you achieved some or all of your Software Requirements Specification (SRS)? `<br/>`
 
-4. Have you achieved some or all of your Software Requirements Specification (SRS)? <br/>
+SRS-01: Yes, we’ve hit a few of our software requirements specifications. First, to achieve SRS-01, we were able to get our own SPI communicating with the LCD screen and get it to render quality images (up to 20kb resolution). We ensured functionality by testing our SPI configuration speed and finding whether or not it hit our expectations of SPI communication. Given that our SPI is running by scaling the clock speed down by 256 (with clock speed of 180MHz), our measured frequency falls within our expectations of the communication that we intended to send and achieves our first software requirement of LCD Display. We collected this data using the Salae analyzer which showed both the sampling rate as well as the overhead that our device faces. `<br/>`
+`<img width="1275" alt="Screenshot 2025-04-18 at 5 46 35 PM" src="https://github.com/user-attachments/assets/3ce65c88-b987-4a9b-aed4-9c58fe70635a" />`
+`<img width="1406" alt="Screenshot 2025-04-18 at 5 41 36 PM" src="https://github.com/user-attachments/assets/32c52a90-4080-4c6b-8e67-a9ebc70e8e27" />`
 
-SRS-01: Yes, we’ve hit a few of our software requirements specifications. First, to achieve SRS-01, we were able to get our own SPI communicating with the LCD screen and get it to render quality images (up to 20kb resolution). We ensured functionality by testing our SPI configuration speed and finding whether or not it hit our expectations of SPI communication. Given that our SPI is running by scaling the clock speed down by 256 (with clock speed of 180MHz), our measured frequency falls within our expectations of the communication that we intended to send and achieves our first software requirement of LCD Display. We collected this data using the Salae analyzer which showed both the sampling rate as well as the overhead that our device faces. <br/>
-<img width="1275" alt="Screenshot 2025-04-18 at 5 46 35 PM" src="https://github.com/user-attachments/assets/3ce65c88-b987-4a9b-aed4-9c58fe70635a" />
-<img width="1406" alt="Screenshot 2025-04-18 at 5 41 36 PM" src="https://github.com/user-attachments/assets/32c52a90-4080-4c6b-8e67-a9ebc70e8e27" />
+SRS-02: We wanted to test the read / write speed of our SD card. Our expectation was to achieve read / write speeds above 100 kHz since our original expectation was to play music that is sampled at 88 kHz. We used a salae analyzer to measure the frequency of both the read / write speed during data loading as well as during the overhead time. Both signaled that the read / write speed was above 100 kHz so we know there must be some other overhead affecting our device operation that we intend to debug. `<br/>`
+`<img width="1404" alt="Screenshot 2025-04-18 at 5 34 36 PM" src="https://github.com/user-attachments/assets/f7fa53eb-a6d3-411d-a7da-82b92664a9f0" />`
+`<img width="1407" alt="Screenshot 2025-04-18 at 5 35 06 PM" src="https://github.com/user-attachments/assets/536c8c47-6587-4fc5-b3f8-8aa42903fb61" />`
 
-SRS-02: We wanted to test the read / write speed of our SD card. Our expectation was to achieve read / write speeds above 100 kHz since our original expectation was to play music that is sampled at 88 kHz. We used a salae analyzer to measure the frequency of both the read / write speed during data loading as well as during the overhead time. Both signaled that the read / write speed was above 100 kHz so we know there must be some other overhead affecting our device operation that we intend to debug. <br/>
-<img width="1404" alt="Screenshot 2025-04-18 at 5 34 36 PM" src="https://github.com/user-attachments/assets/f7fa53eb-a6d3-411d-a7da-82b92664a9f0" />
-<img width="1407" alt="Screenshot 2025-04-18 at 5 35 06 PM" src="https://github.com/user-attachments/assets/536c8c47-6587-4fc5-b3f8-8aa42903fb61" />
+SRS-03: We were able to achieve this software specification and get the speaker to play music with our required volume. We initially achieved this by loading music byte data directly onto our flash using a .h file. We were then able to read the information stored on our SD card and play it through our speaker. It wasn’t great song data since it wasn’t sampled at the correct frequency, but it was able to factor in the delays that were in the song, so our expectation is that the data read is correct and the speaker is working as intended. We further expand on this in our hardware specification since it is a mix of software and hardware implementation. `<br/>`
 
-SRS-03: We were able to achieve this software specification and get the speaker to play music with our required volume. We initially achieved this by loading music byte data directly onto our flash using a .h file. We were then able to read the information stored on our SD card and play it through our speaker. It wasn’t great song data since it wasn’t sampled at the correct frequency, but it was able to factor in the delays that were in the song, so our expectation is that the data read is correct and the speaker is working as intended. We further expand on this in our hardware specification since it is a mix of software and hardware implementation. <br/>
+SRS-04: The microcontroller is interfacing with all of our components besides our hardware buttons (with interrupts). We intend to add this feature last since we know the interrupt pins on the STM and know how the integration will work with our device. `<br/>`
 
-SRS-04: The microcontroller is interfacing with all of our components besides our hardware buttons (with interrupts). We intend to add this feature last since we know the interrupt pins on the STM and know how the integration will work with our device. <br/>
+SRS-05: We have built the GUI on our own without loading it onto the LCD screen yet. We have loaded the code for rendering our designs and know that they work with our device. We are still in the stages of integrating the user interface completely, but know that the most important part (rendering information and text) works on the LCD. `<br/>`
 
-SRS-05: We have built the GUI on our own without loading it onto the LCD screen yet. We have loaded the code for rendering our designs and know that they work with our device. We are still in the stages of integrating the user interface completely, but know that the most important part (rendering information and text) works on the LCD. <br/>
+5. Have you achieved some or all of your Hardware Requirements Specification (HRS)? `<br/>`
+   HRS-01: The LCD screen is working as intended with resolutions of 180 by 128. We were able to complete this by using the ST7735 that we learned how to use in class. We then loaded an image (our intended background image) onto the device and had the LCD screen display that image. We needed to scale down our original hardware goals of using a touch screen sensor since using the larger device screen size would eat into too much of our device memory and we didn’t feel it was an essential part of our device application. Look to the device demo section to see the image rendering on our LCD screen. `<br/>`
 
-5. Have you achieved some or all of your Hardware Requirements Specification (HRS)? <br/>
-HRS-01: The LCD screen is working as intended with resolutions of 180 by 128. We were able to complete this by using the ST7735 that we learned how to use in class. We then loaded an image (our intended background image) onto the device and had the LCD screen display that image. We needed to scale down our original hardware goals of using a touch screen sensor since using the larger device screen size would eat into too much of our device memory and we didn’t feel it was an essential part of our device application. Look to the device demo section to see the image rendering on our LCD screen. <br/>
+HRS-02: Yes, we were able to read using the SD card. This was also part of our software implementation since we needed an actual hardware system for loading songs in. For our current implementation, we have soldered all of our devices onto a small prototype board that we are going to fit inside our 3D print. `<br/>`
 
-HRS-02: Yes, we were able to read using the SD card. This was also part of our software implementation since we needed an actual hardware system for loading songs in. For our current implementation, we have soldered all of our devices onto a small prototype board that we are going to fit inside our 3D print. <br/>
+HRS-03: The speaker is meeting our audio requirements. We wanted the speaker to hit both weaker and louder decibel sounds. Our goal was to be able to have the listener hear sounds of 20 decibels at least. Please see the link here (https://drive.google.com/file/d/1t_PpoSGUQ0jUIH2feo2uJvg4bEwMVCDj/view?usp=sharing) for our measurement of the device sound using one of our phones. We did not realize that sound wasn’t required along with the screen record, but this is a recording of our song initializing and music growing louder along with the song. `<br/>`
 
-HRS-03: The speaker is meeting our audio requirements. We wanted the speaker to hit both weaker and louder decibel sounds. Our goal was to be able to have the listener hear sounds of 20 decibels at least. Please see the link here (https://drive.google.com/file/d/1t_PpoSGUQ0jUIH2feo2uJvg4bEwMVCDj/view?usp=sharing) for our measurement of the device sound using one of our phones. We did not realize that sound wasn’t required along with the screen record, but this is a recording of our song initializing and music growing louder along with the song. <br/>
+HRS-04: As we’ve noted before, the microcontroller is communicating cleanly with our peripherals. A peripheral that we are specifically proud of communicating with is the IMU where our goal is to obtain measurements every 100 ms since we don’t have a need for constantly measuring the angular velocity of the device on all 3 of its axes. We were able to achieve this goal with I2C code that we wrote using bare metal C and are measuring changes in device rotational speeds with respect to the yaw, roll and pitch angles. Please look towards the video provided here to see that we’ve hit data transmission speeds of at least 10Hz to our device. `<br/>`
 
-HRS-04: As we’ve noted before, the microcontroller is communicating cleanly with our peripherals. A peripheral that we are specifically proud of communicating with is the IMU where our goal is to obtain measurements every 100 ms since we don’t have a need for constantly measuring the angular velocity of the device on all 3 of its axes. We were able to achieve this goal with I2C code that we wrote using bare metal C and are measuring changes in device rotational speeds with respect to the yaw, roll and pitch angles. Please look towards the video provided here to see that we’ve hit data transmission speeds of at least 10Hz to our device. <br/>
+https://drive.google.com/file/d/1ABjZcdwRX6afHHr8z1_RlbBKv2L5fbjk/view?usp=sharing `<br/>`
 
-https://drive.google.com/file/d/1ABjZcdwRX6afHHr8z1_RlbBKv2L5fbjk/view?usp=sharing <br/>
+We timed the device readings per second sent to UART and found 22 readings per second which validates our hardware requirement. `<br/>`
 
-We timed the device readings per second sent to UART and found 22 readings per second which validates our hardware requirement. <br/>
+HRS-05: We installed a buck boost converted board into our design that can take 3-12V supply and convert it into our required output. We tested using the buck boost converter with the lab power source and with the lab multimeter and were able to find that the buck boost converter was highly efficient. We then determined the configuration to power our STM32 (changed its jumper configurations) and found that the required current to power the device was low meaning that supply from batteries is likely sufficient for our device. We found that all of the device’s capabilities worked from 3V to 6V which is good news for us. `<br/>`
 
-HRS-05: We installed a buck boost converted board into our design that can take 3-12V supply and convert it into our required output. We tested using the buck boost converter with the lab power source and with the lab multimeter and were able to find that the buck boost converter was highly efficient. We then determined the configuration to power our STM32 (changed its jumper configurations) and found that the required current to power the device was low meaning that supply from batteries is likely sufficient for our device. We found that all of the device’s capabilities worked from 3V to 6V which is good news for us. <br/>
+HRS-06: The final part of our project to implement is to add the buttons for interfacing with our LCD screen. We will add these buttons right after we finish getting our read / write speeds up to their required levels for playing any quality of music since that is the most important part of our project.  `<br/>`
 
-HRS-06: The final part of our project to implement is to add the buttons for interfacing with our LCD screen. We will add these buttons right after we finish getting our read / write speeds up to their required levels for playing any quality of music since that is the most important part of our project.  <br/>
+6. Show off the remaining elements that will make your project whole: mechanical casework, supporting graphical user interface (GUI), web portal, etc. `<br/>`
+   There are a few things that will complete our project. Obviously, there is still the read/write issue that we intend to fix by the end of this weekend. After that issue is fixed, we intend to address a few more issues.
+   `<br/>`
 
-6. Show off the remaining elements that will make your project whole: mechanical casework, supporting graphical user interface (GUI), web portal, etc. <br/>
-There are a few things that will complete our project. Obviously, there is still the read/write issue that we intend to fix by the end of this weekend. After that issue is fixed, we intend to address a few more issues.
-<br/>
+Integration, we need to integrate all of our components together in terms of adding the LCD screen and IMU to our speaker configuration. We also need to add our buttons with their interrupts for controlling the IMU. `<br/>`
 
-Integration, we need to integrate all of our components together in terms of adding the LCD screen and IMU to our speaker configuration. We also need to add our buttons with their interrupts for controlling the IMU. <br/>
+Case. We will need to print a 3D case to house our device. Patrick has a 3D printer in his room and we have all of the required STEP files to make prints. We intend to begin making models right after we fix our SD card issues so we can get a few iterations in. `<br/>`
 
-Case. We will need to print a 3D case to house our device. Patrick has a 3D printer in his room and we have all of the required STEP files to make prints. We intend to begin making models right after we fix our SD card issues so we can get a few iterations in. <br/>
+Website. We want to make a website for this project that will allow the user to convert the songs they find into a file that can be processed by our microcontroller. Since we aren’t using MP4 or WAV files, we need to ensure that the user can actually select songs they want to play and put them onto the SD card. We intend to make a website that will allow them to convert their WAV songs into files that work with our microcontroller configuration. `<br/>`
 
-Website. We want to make a website for this project that will allow the user to convert the songs they find into a file that can be processed by our microcontroller. Since we aren’t using MP4 or WAV files, we need to ensure that the user can actually select songs they want to play and put them onto the SD card. We intend to make a website that will allow them to convert their WAV songs into files that work with our microcontroller configuration. <br/>
+7. What is the riskiest part remaining of your project? `<br/>`
+   The riskiest part of our project right now is that reading from the SD card is slower than we expected. `<br/>`
 
-7. What is the riskiest part remaining of your project? <br/>
-The riskiest part of our project right now is that reading from the SD card is slower than we expected. <br/>
-   1. How do you plan to de-risk this? <br/>
-Since this is the final missing major component for us before we are ready to build an enclosure and assemble a final product, our goal is to focus all of our energy into finding a solution to this problem. 
-If we aren’t able to find a viable solution, we’re planning a few alternative options. <br/>
-The first solution is to further downsample our songs so that we have less bytes to stream per second. We are currently around 10x behind when streaming data to our device compared to the length of audio that we’re intending to play. We are currently playing our songs sampled at a 88kHz rate. Our plan is to first try downsampling songs to a 8kHz rate and play downsampled songs at that rate. We are willing to keep working downwards if that doesn’t solve our problem since our goal is to play music of any quality. <br/>
-If downsampling doesn’t work, then we intend to maximize our SRAM usage by playing shorter pieces of music (instead of full length songs). We would play 20 second snippets of songs and accomplish this by storing as much of the song as possible onto our RAM. Once we fill up the majority of our RAM, we would use a queue structure so that we can load more data into our RAM and keep track of where the speaker is currently playing. We’d prefer not to use this option since we would no longer be able to play an entire song. <br/>
-Finally, we are considering re-installing the microphone and changing the functionality of the device to just allow the user to just record what they are saying for a few seconds instead of playing music. We will keep trying to turn down the sample rate and will try our second option. If neither works, then we will likely have to turn to this option, which we don’t expect to take a long time since every other part of our device is already working. <br/>
-
-8. What questions or help do you need from the teaching team? <br/>
-We just need any suggestions on how to get a faster read / write speed out of our SD card reader. Everything else is basically fully built out and ready to be integrated into our device. Once we have that working with the music playing, we will only have to worry about integration. 
+   1. How do you plan to de-risk this? `<br/>`
+      Since this is the final missing major component for us before we are ready to build an enclosure and assemble a final product, our goal is to focus all of our energy into finding a solution to this problem.
+      If we aren’t able to find a viable solution, we’re planning a few alternative options. `<br/>`
+      The first solution is to further downsample our songs so that we have less bytes to stream per second. We are currently around 10x behind when streaming data to our device compared to the length of audio that we’re intending to play. We are currently playing our songs sampled at a 88kHz rate. Our plan is to first try downsampling songs to a 8kHz rate and play downsampled songs at that rate. We are willing to keep working downwards if that doesn’t solve our problem since our goal is to play music of any quality. `<br/>`
+      If downsampling doesn’t work, then we intend to maximize our SRAM usage by playing shorter pieces of music (instead of full length songs). We would play 20 second snippets of songs and accomplish this by storing as much of the song as possible onto our RAM. Once we fill up the majority of our RAM, we would use a queue structure so that we can load more data into our RAM and keep track of where the speaker is currently playing. We’d prefer not to use this option since we would no longer be able to play an entire song. `<br/>`
+      Finally, we are considering re-installing the microphone and changing the functionality of the device to just allow the user to just record what they are saying for a few seconds instead of playing music. We will keep trying to turn down the sample rate and will try our second option. If neither works, then we will likely have to turn to this option, which we don’t expect to take a long time since every other part of our device is already working. `<br/>`
+8. What questions or help do you need from the teaching team? `<br/>`
+   We just need any suggestions on how to get a faster read / write speed out of our SD card reader. Everything else is basically fully built out and ready to be integrated into our device. Once we have that working with the music playing, we will only have to worry about integration.
 
 ## Final Project Report
 
