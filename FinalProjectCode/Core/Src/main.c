@@ -168,9 +168,6 @@ void initialize(void) {
 }
 int main(void) {
  initialize();
-
-
-
  int retries = 0;
  play_button_press_time = 0;
   do {
