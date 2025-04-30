@@ -22,55 +22,6 @@
 #define    CR1_STOP            (1U<<9)
 #define    SR1_RXNE            (1U<<6)
 #define    SR1_BTF            (1U<<2)
-/*
- * PB8 ---- SCL
- * PB9 ----- SDA
- * */
-
-//void i2c1_init(void)
-//{
-//    /*Enable clock access to GPIOB*/
-//     RCC->AHB1ENR |=GPIOBEN;
-//    /*Set PB8 and PB9 mode to alternate function*/
-//    GPIOB->MODER &=~(1U<<16);
-//    GPIOB->MODER |=(1U<<17);
-//    GPIOB->MODER &=~(1U<<18);
-//    GPIOB->MODER |=(1U<<19);
-//    /*Set PB8 and PB9 output type to  open drain*/
-//    GPIOB->OTYPER |=(1U<<8);
-//    GPIOB->OTYPER |=(1U<<9);
-//    /*Enable Pull-up for PB8 and PB9*/
-//    GPIOB->PUPDR |=(1U<<16);
-//    GPIOB->PUPDR &=~(1U<<17);
-//    GPIOB->PUPDR |=(1U<<18);
-//    GPIOB->PUPDR &=~(1U<<19);
-//    /*Set PB8 and PB9 alternate function type to I2C (AF4)*/
-//    GPIOB->AFR[1] &=~(1U<<0);
-//    GPIOB->AFR[1] &=~(1U<<1);
-//    GPIOB->AFR[1] |=(1U<<2);
-//    GPIOB->AFR[1] &=~(1U<<3);
-//    GPIOB->AFR[1] &=~(1U<<4);
-//    GPIOB->AFR[1] &=~(1U<<5);
-//    GPIOB->AFR[1] |=(1U<<6);
-//    GPIOB->AFR[1] &=~(1U<<7);
-//
-//    /*Enable clock access to I2C1*/
-//     RCC->APB1ENR |= I2C1EN;
-//    /*Enter reset mode  */
-//    I2C1->CR1 |= (1U<<15);
-//    /*Come out of reset mode  */
-//    I2C1->CR1 &=~(1U<<15);
-//
-//    /*Set Peripheral clock frequency*/
-//    I2C1->CR2 = (1U<<4);   //16 Mhz
-//    /*Set I2C to standard mode, 100kHz clock */
-//    I2C1->CCR = I2C_100KHZ;
-//    /*Set rise time */
-//    I2C1->TRISE = SD_MODE_MAX_RISE_TIME;
-//    /*Enable I2C1 module */
-//    I2C1->CR1 |= CR1_PE;
-//}
-//
 
 #define PCLK1_MHZ          40U          /* 160 MHz / 4  */
 #define I2C_CCR_STD_100k   ((PCLK1_MHZ * 1000000U) / (4U * 100000U))   /* 200 */
@@ -78,7 +29,6 @@
 
 void i2c1_init(void)
 {
-    /* 1. Enable GPIOB --------------------------------------------------- */
     RCC->AHB1ENR |= GPIOBEN;
 
     /* PB8, PB9 -> AF4, open-drain, pull-up ------------------------------ */

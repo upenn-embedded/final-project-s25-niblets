@@ -13,8 +13,8 @@
 #define LSM6D50_ADDR   0x6B
 #define CTRL2_G          0x11  // Gyroscope control register (11h)
 #define OUTX_L_G         0x22  // Starting register for gyro X low byte
-#define ODR_104Hz        0x40  // Output Data Rate: 104 Hz (example)
-#define FS_250           0x00  // Full-scale: ±250 dps (example)
+#define ODR_104Hz        0x40  // Output Data Rate: 104 Hz
+#define FS_250           0x00  // Full-scale: ±250 dps
 
 void imu_i2c_init();
 void gyro_init();

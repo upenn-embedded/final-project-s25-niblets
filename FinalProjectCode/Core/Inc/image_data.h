@@ -1,9 +1,6 @@
 #ifndef HOME_DATA_H
 #define HOME_DATA_H
 
-//#define IMAGE_WIDTH 180
-//#define IMAGE_HEIGHT 128
-
 const uint16_t image_data[23040] = {
 0x0043, 0x0043, 0x0043, 0x0043, 0x0043, 0x0043, 0x0043, 0x0043, 0x0043, 0x0043,
 0x0043, 0x0043, 0x0043, 0x0043, 0x0043, 0x0043, 0x0043, 0x0043, 0x0043, 0x0043,
@@ -2312,4 +2309,4 @@ const uint16_t image_data[23040] = {
 
 };
 
-#endif // IMAGE_DATA_H
+#endif

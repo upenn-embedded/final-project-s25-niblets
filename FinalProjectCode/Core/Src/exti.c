@@ -27,7 +27,6 @@ void pc13_exti_init(void)
     __enable_irq();
 }
 
-// EXTI on PB3 — rising edge
 void pb3_exti_init(void)
 {
     __disable_irq();
@@ -79,7 +78,7 @@ void pb5_exti_init(void)
 
     // 2a) Pull‑down so PB5 idles low
     GPIOB->PUPDR  &= ~(3U << (5 * 2));
-    GPIOB->PUPDR  |=  (2U << (5 * 2));   // 10 = pull‑down
+    GPIOB->PUPDR  |=  (2U << (5 * 2));
 
     // 3) Enable SYSCFG clock
     RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
@@ -105,7 +104,6 @@ void pb5_exti_init(void)
     __enable_irq();
 }
 
-// EXTI on PA10
 void pa10_exti_init(void)
 {
     __disable_irq();

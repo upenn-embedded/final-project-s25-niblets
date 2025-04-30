@@ -21,19 +21,15 @@ void imu_i2c_init()
 void gyro_init()
 {
 	uint8_t ctrl2_g_value = ODR_104Hz | FS_250;
-   // Write to CTRL2_G register to enable the gyro with desired settings.
    i2c1_burst_write(LSM6D50_ADDR, CTRL2_G, 1, &ctrl2_g_value);
-   // Allow time for sensor to apply settings
    HAL_Delay(10);
 }
 
 void gyro_read(int16_t *gyro_x, int16_t *gyro_y, int16_t *gyro_z)
 {
    uint8_t gyroData[6];
-   // Read 6 bytes starting from OUTX_L_G
    i2c1_burst_read(LSM6D50_ADDR, OUTX_L_G, 6, gyroData);
    HAL_Delay(10);
-   // Combine bytes for each axis (little-endian format)
    *gyro_x = (int16_t)((gyroData[1] << 8) | gyroData[0]);
    *gyro_y = (int16_t)((gyroData[3] << 8) | gyroData[2]);
    *gyro_z = (int16_t)((gyroData[5] << 8) | gyroData[4]);

@@ -15,31 +15,13 @@
 #ifndef ST7735_H_
 #define ST7735_H_
 
-// This stuff here needs to be fixed
-// New definitions given here
 #define LCD_PORT_B		GPIOB
 #define LCD_PORT_A		GPIOA
 #define LCD_RST			GPIO_PIN_4 //B
 #define LCD_TFT_CS		GPIO_PIN_9 //A
 #define LCD_DC			GPIO_PIN_8 //A
 
-//PA7
-//GPIOA->MODER &=~(1U<<14);
-//GPIOA->MODER |=(1U<<15);
-// PA5
-//GPIOA->MODER &=~(1U<<10);
-//GPIOA->MODER |=(1U<<11);
-
-
-////LCD_LITE must be connected to pin 6 of Arduino Uno for PWM to change brightness (Otherwise, connect to 5V supply)
-//#define LCD_LITE_PORT	PORTD
-//#define LCD_LITE_DDR	DDRD
-//#define LCD_LITE		PORTD6
-
-
-
-
-#define LCD_WIDTH 180
+#define LCD_WIDTH 160
 #define LCD_HEIGHT 128
 #define LCD_SIZE  LCD_WIDTH * LCD_HEIGHT
 

@@ -432,19 +432,6 @@ int main(void) {
 					 	    printf("next working in the fsm\r\n");
 					 	   		   }
 
-//					if (playButtonPressed) {
-//
-//
-//					 		HAL_I2S_DMAPause(&hi2s2);
-//					 		playButtonPressed = false;
-//					 		EXTI->PR = (1U << 3);
-//					 		delay_ms(200);
-//					 		current_state = PAUSE;
-//					 		printf("pressed pause button \r\n");
-//					 		printf("current_state == PLAYING\r\n");
-//
-//					  }
-
 					if (prevButtonPressed) {
 					 	prev_song_idx = active_song_idx;
 					 	active_song_idx = max(0, active_song_idx - 1);
@@ -461,15 +448,6 @@ int main(void) {
 					 }
 	   		 break;
 	   	   case PAUSE:
-//	   		   	   if (playButtonPressed) {
-//	   		   		   current_state = PLAYING;
-//	   		   		   //delay_ms(200);
-//	   		   		   HAL_I2S_DMAResume(&hi2s2);
-//	   		   		   playButtonPressed = false;
-//	   		   		   printf("pressed play button \r\n");
-//	   		   		   printf("current_state == PAUSE\r\n");
-//	   				}
-
 					if (prevButtonPressed) {
 					 	prev_song_idx = active_song_idx;
 					 	active_song_idx = max(0, active_song_idx - 1);
@@ -560,22 +538,6 @@ void EXTI15_10_IRQHandler(void) {
        EXTI->PR = (1U << 10);
        nextButtonPressed = true;
        delay_ms(200);
-//           case PAUSE:
-//			current_state = PLAYLIST;
-//		 	f_close(&fil);
-//			HAL_I2S_DMAStop(&hi2s2);
-//			break;
-//           case PLAYING:
-//           	active_song_idx = min(num_songs_in_sd, active_song_idx + 1);
-//           	song_index +=1;
-//           	song_index %= num_songs_in_sd;
-//           	song_not_started = true;
-//           	printf("next pressed \r\n");
-//           	printf("switched to next song, still in playing mode \r\n");
-//                break;
-//           default:
-//               break;
-//     }
    }
 }
 
@@ -583,29 +545,9 @@ void EXTI15_10_IRQHandler(void) {
 void EXTI3_IRQHandler(void) {
    if (EXTI->PR & (1U << 3)) {
        EXTI->PR = (1U << 3);
-       //if (!(GPIOC->IDR & (1U << 3))) {
 
     	   playButtonPressed = true;
-    	   //printf("play is pressed\r\n");
     	   delay_ms(200);
-
-
-//					case PAUSE:
-//							HAL_I2S_DMAResume(&hi2s2);
-//							current_state = PLAYING;
-//							printf("pressed play button \r\n");
-//							printf("Switch to Playing from Pausing \r\n");
-//							break;
-//					case PLAYING:
-//							printf("pressed play button \r\n");
-//							printf("Switch to Pausing from Playing \r\n");
-//							HAL_I2S_DMAPause(&hi2s2);
-//							current_state = PAUSE;
-//							break;
-//				   default:
-//							break;
-//				  }
-		//	}
    }
 }
 // previous
@@ -614,32 +556,14 @@ void EXTI9_5_IRQHandler(void) {
        EXTI->PR = (1U << 5);
        prevButtonPressed = true;
        delay_ms(200);
-//			   case PAUSE:
-//				   current_state = PLAYLIST;
-//				   f_close(&fil);
-//				   HAL_I2S_DMAStop(&hi2s2);
-//					break;
-//			   case PLAYING:
-//				   printf("pressed previous button \r\n");
-//				   printf("still in playing mode \r\n");
-//				   active_song_idx = max(0, active_song_idx - 1);
-//				   song_index -=1;
-//				   song_index %= num_songs_in_sd;
-//				   song_not_started = true;
-//					break;
-//			   default:
-//					break;
-//		   }
        }
 }
 
 
 void HAL_I2S_TxHalfCpltCallback(I2S_HandleTypeDef *hi2s) {
-//	led_on();
 	callback_result = HALF_COMPLETED;
 }
 void HAL_I2S_TxCpltCallback(I2S_HandleTypeDef *hi2s){
-//	led_off();
 	callback_result = FULL_COMPLETED;
 	played_size += 32000;
 }

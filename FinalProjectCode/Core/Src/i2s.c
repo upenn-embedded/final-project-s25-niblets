@@ -91,16 +91,6 @@ void I2S_config(void) {
     SPI2->I2SCFGR |= SPI_I2SCFGR_I2SE;
 }
 
-// Remove these functions - they're incorrect when using I2S in hardware mode
-// void ws2_enable(void) {
-//     GPIOB->ODR &= ~(1U << 12); // Active low - Don't manually control this pin!
-// }
-//
-// void ws2_disable(void) {
-//     GPIOB->ODR |= (1U << 12); // Inactive high - Don't manually control this pin!
-// }
-
-// Add DMA configuration (missing from original)
 void I2S2_DMA_config(void) {
     // Enable DMA1 clock
     RCC->AHB1ENR |= RCC_AHB1ENR_DMA1EN;
@@ -121,8 +111,6 @@ void I2S2_DMA_config(void) {
 
     // Set peripheral address
     DMA1_Stream4->PAR = (uint32_t)&(SPI2->DR);
-
-    // Note: Memory address and number of data items will be set in transmit function
 }
 
 void I2S2_transmit_DMA(uint16_t *buffer, uint16_t len) {
@@ -140,22 +128,16 @@ void I2S2_transmit_DMA(uint16_t *buffer, uint16_t len) {
     // Enable DMA
     DMA1_Stream4->CR |= DMA_SxCR_EN;
 
-    // Note: The function returns immediately.
-    // You can check DMA1->HISR & DMA_HISR_TCIF4 to see if transfer is complete
 }
 
-// Keep the original polling-based transmit function for reference
 void I2S2_transmit(uint16_t *buffer, uint8_t len) {
     for (uint8_t i = 0; i < len; ++i) {
         // Wait until TXE (Transmit buffer empty) is set
         while (!(SPI2->SR & SPI_SR_TXE)) {
-            // wait
         }
         // Write 16-bit data to the data register
         SPI2->DR = buffer[i];
     }
-    // Wait until BSY (Busy flag) is cleared: last frame is fully sent
     while (SPI2->SR & SPI_SR_BSY) {
-        // wait
     }
 }
